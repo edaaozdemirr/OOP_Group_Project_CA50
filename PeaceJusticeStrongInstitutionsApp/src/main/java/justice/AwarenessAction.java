@@ -1,4 +1,5 @@
-package src;
+package justice;
+
 public class AwarenessAction {
-    
+
 }
