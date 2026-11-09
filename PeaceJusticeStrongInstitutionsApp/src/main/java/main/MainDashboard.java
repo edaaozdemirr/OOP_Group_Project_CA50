@@ -4,6 +4,10 @@
  */
 package main;
 
+//importing the GUIs from the stronginstitutions java package
+import stronginstitutions.InstitutionViewerFrame;
+import stronginstitutions.InfrastructurePolicyHub;
+import stronginstitutions.AuditFeedbackForm;
 /**
  *
  * @author Nilantha
@@ -28,7 +32,39 @@ public class MainDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        MenuBar = new javax.swing.JMenuBar();
+        globalPeace = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        strongInstitutions = new javax.swing.JMenu();
+        metricViewer = new javax.swing.JMenuItem();
+        auditFeedback = new javax.swing.JMenuItem();
+        infastructurePolicy = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        globalPeace.setText("Global Peace");
+        MenuBar.add(globalPeace);
+
+        jMenu1.setText("Justice");
+        MenuBar.add(jMenu1);
+
+        strongInstitutions.setText("Strong Institutions");
+
+        metricViewer.setText("Institution Performance & Metric Viewer");
+        metricViewer.addActionListener(this::metricViewerActionPerformed);
+        strongInstitutions.add(metricViewer);
+
+        auditFeedback.setText("Audit Feedback Form");
+        auditFeedback.addActionListener(this::auditFeedbackActionPerformed);
+        strongInstitutions.add(auditFeedback);
+
+        infastructurePolicy.setText("Infastructure Policy Hub");
+        infastructurePolicy.addActionListener(this::infastructurePolicyActionPerformed);
+        strongInstitutions.add(infastructurePolicy);
+
+        MenuBar.add(strongInstitutions);
+
+        setJMenuBar(MenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -38,11 +74,31 @@ public class MainDashboard extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 278, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+//Connecting the sections from Strong Institutions (Menomi)
+    //Make use of menuItem
+    private void metricViewerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metricViewerActionPerformed
+        //Creating a new instance of the GUI 
+        InstitutionViewerFrame viewerFrame = new InstitutionViewerFrame();
+        viewerFrame.setVisible(true); //Make the GUI frame visible on the screen
+        this.dispose();      //closes the main dashboard
+    }//GEN-LAST:event_metricViewerActionPerformed
+    //The infastructure and Policy form section
+    private void infastructurePolicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infastructurePolicyActionPerformed
+        InfrastructurePolicyHub policyHub = new InfrastructurePolicyHub();
+        policyHub.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_infastructurePolicyActionPerformed
+    //Audit feedback form section
+    private void auditFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_auditFeedbackActionPerformed
+        AuditFeedbackForm feedbackForm = new AuditFeedbackForm();
+        feedbackForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_auditFeedbackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +126,12 @@ public class MainDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar MenuBar;
+    private javax.swing.JMenuItem auditFeedback;
+    private javax.swing.JMenu globalPeace;
+    private javax.swing.JMenuItem infastructurePolicy;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem metricViewer;
+    private javax.swing.JMenu strongInstitutions;
     // End of variables declaration//GEN-END:variables
 }
