@@ -10,6 +10,8 @@ import stronginstitutions.InfrastructurePolicyHub;
 import stronginstitutions.AuditFeedbackForm;
 import globalPeace.PeaceBuilderInfoFrame;
 import globalPeace.Donations;
+import justice.ActionGUI;
+import justice.CasesGUI;
 /**
  *
  * @author Nilantha
@@ -39,6 +41,8 @@ public class MainDashboard extends javax.swing.JFrame {
         donations = new javax.swing.JMenuItem();
         info = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         strongInstitutions = new javax.swing.JMenu();
         metricViewer = new javax.swing.JMenuItem();
         auditFeedback = new javax.swing.JMenuItem();
@@ -59,6 +63,15 @@ public class MainDashboard extends javax.swing.JFrame {
         MenuBar.add(globalPeace);
 
         jMenu1.setText("Justice");
+
+        jMenuItem1.setText("Take Action Form");
+        jMenuItem1.addActionListener(this::jMenuItem1ActionPerformed);
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Explore Cases");
+        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
+        jMenu1.add(jMenuItem2);
+
         MenuBar.add(jMenu1);
 
         strongInstitutions.setText("Strong Institutions");
@@ -125,6 +138,18 @@ public class MainDashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_infoActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        ActionGUI actionForm = new ActionGUI();
+        actionForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        CasesGUI casesForm = new CasesGUI();
+        casesForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -158,6 +183,8 @@ public class MainDashboard extends javax.swing.JFrame {
     private javax.swing.JMenuItem infastructurePolicy;
     private javax.swing.JMenuItem info;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem metricViewer;
     private javax.swing.JMenu strongInstitutions;
     // End of variables declaration//GEN-END:variables

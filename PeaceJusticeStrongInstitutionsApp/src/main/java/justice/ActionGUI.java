@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package justice;
+import main.MainDashboard;
 
 /**
  *
@@ -67,8 +68,11 @@ public class ActionGUI extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
@@ -153,11 +157,24 @@ public class ActionGUI extends javax.swing.JFrame {
         jTextField6.setText("http:/link2.com");
         jTextField6.addActionListener(this::jTextField6ActionPerformed);
 
+        jMenu5.setText("Main");
+
+        jMenuItem1.setText("Main Dashboard");
+        jMenuItem1.addActionListener(this::jMenuItem1ActionPerformed);
+        jMenu5.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu5);
+
         jMenu2.setText("Global Peace");
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Justice");
         jMenu3.addActionListener(this::jMenu3ActionPerformed);
+
+        jMenuItem2.setText("Explore Cases");
+        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
+        jMenu3.add(jMenuItem2);
+
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Strong Institutions");
@@ -279,7 +296,7 @@ public class ActionGUI extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -324,6 +341,18 @@ public class ActionGUI extends javax.swing.JFrame {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        MainDashboard mainmenu = new MainDashboard();
+        mainmenu.setVisible(true); //Make the GUI frame visible on the screen
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        CasesGUI casesForm = new CasesGUI();
+        casesForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -381,7 +410,10 @@ public class ActionGUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
