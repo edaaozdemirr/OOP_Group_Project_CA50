@@ -4,6 +4,7 @@
  */
 package globalPeace;
 
+import main.MainDashboard;
 /**
  *
  * @author david
@@ -40,6 +41,7 @@ public class PeaceBuilderInfoFrame extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        HomeBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 255));
@@ -64,15 +66,24 @@ public class PeaceBuilderInfoFrame extends javax.swing.JFrame {
         MCM.setText("Maria Corina Machado");
 
         jTextArea2.setColumns(20);
+        jTextArea2.setLineWrap(true);
         jTextArea2.setRows(5);
+        jTextArea2.setText("Navi Pillay advanced world peace by pioneering international human rights law and accountability. As President of the International Criminal Tribunal for Rwanda, she set a landmark legal precedent by ruling sexual violence and rape as acts of genocide. She also served as a judge on the International Criminal Court and spent six years as the UN High Commissioner for Human Rights defending victims of war crimes and global injustice.");
+        jTextArea2.setWrapStyleWord(true);
         jScrollPane2.setViewportView(jTextArea2);
 
         jTextArea4.setColumns(20);
+        jTextArea4.setLineWrap(true);
         jTextArea4.setRows(5);
+        jTextArea4.setText("María Corina Machado advanced world peace by defending democratic rights and human dignity under Venezuelan authoritarian rule. As a leading opposition figure, she unified pro-democracy forces and organized a grassroots campaign to document electoral transparency. Recognized with the 2025 Nobel Peace Prize, her peaceful resistance highlighted the essential connection between free democratic governance and lasting peace.");
+        jTextArea4.setWrapStyleWord(true);
         jScrollPane4.setViewportView(jTextArea4);
 
         jButton1.setText("Take the quiz");
         jButton1.addActionListener(this::jButton1ActionPerformed);
+
+        HomeBtn.setText("Home");
+        HomeBtn.addActionListener(this::HomeBtnActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,7 +100,8 @@ public class PeaceBuilderInfoFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(HomeBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +133,9 @@ public class PeaceBuilderInfoFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(HomeBtn))
                 .addContainerGap())
         );
 
@@ -135,6 +149,12 @@ public class PeaceBuilderInfoFrame extends javax.swing.JFrame {
     // Close the current info frame
     this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void HomeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeBtnActionPerformed
+        MainDashboard main = new MainDashboard();
+        main.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_HomeBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,6 +183,7 @@ public class PeaceBuilderInfoFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Henry_Dunant;
+    private javax.swing.JButton HomeBtn;
     private javax.swing.JLabel MCM;
     private javax.swing.JLabel Navi_Pillay;
     private javax.swing.JLabel Title;

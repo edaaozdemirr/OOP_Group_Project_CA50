@@ -8,6 +8,8 @@ package main;
 import stronginstitutions.InstitutionViewerFrame;
 import stronginstitutions.InfrastructurePolicyHub;
 import stronginstitutions.AuditFeedbackForm;
+import globalPeace.PeaceBuilderInfoFrame;
+import globalPeace.Donations;
 /**
  *
  * @author Nilantha
@@ -34,6 +36,8 @@ public class MainDashboard extends javax.swing.JFrame {
 
         MenuBar = new javax.swing.JMenuBar();
         globalPeace = new javax.swing.JMenu();
+        donations = new javax.swing.JMenuItem();
+        info = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         strongInstitutions = new javax.swing.JMenu();
         metricViewer = new javax.swing.JMenuItem();
@@ -43,6 +47,15 @@ public class MainDashboard extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         globalPeace.setText("Global Peace");
+
+        donations.setText("Donations");
+        donations.addActionListener(this::donationsActionPerformed);
+        globalPeace.add(donations);
+
+        info.setText("Info");
+        info.addActionListener(this::infoActionPerformed);
+        globalPeace.add(info);
+
         MenuBar.add(globalPeace);
 
         jMenu1.setText("Justice");
@@ -100,6 +113,18 @@ public class MainDashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_auditFeedbackActionPerformed
 
+    private void donationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donationsActionPerformed
+        Donations donateForm = new Donations();
+        donateForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_donationsActionPerformed
+
+    private void infoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoActionPerformed
+        PeaceBuilderInfoFrame PeaceInfoForm = new PeaceBuilderInfoFrame();
+        PeaceInfoForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_infoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -128,8 +153,10 @@ public class MainDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar MenuBar;
     private javax.swing.JMenuItem auditFeedback;
+    private javax.swing.JMenuItem donations;
     private javax.swing.JMenu globalPeace;
     private javax.swing.JMenuItem infastructurePolicy;
+    private javax.swing.JMenuItem info;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem metricViewer;
     private javax.swing.JMenu strongInstitutions;
