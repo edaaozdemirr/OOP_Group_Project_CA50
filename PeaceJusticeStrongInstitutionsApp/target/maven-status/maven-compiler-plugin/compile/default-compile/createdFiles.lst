@@ -1,7 +1,12 @@
+justice\CasesGUI.class
 globalPeace\QuizFrame.class
 justice\AwarenessAction.class
+stronginstitutions\InfrastructurePolicyHub.class
 justice\Summarizable.class
 justice\HumanRightsCase.class
+justice\ActionGUI$1.class
+stronginstitutions\AuditFeedbackForm.class
+stronginstitutions\InstitutionViewerFrame.class
 globalPeace\Donations.class
 justice\Cases.class
 globalPeace\DonationRecords.class
@@ -9,3 +14,6 @@ justice\CasesNotes.class
 main\MainDashboard.class
 globalPeace\PeaceBuilderInfoFrame.class
 justice\ReportingAction.class
+stronginstitutions\InstitutionViewerFrame$1.class
+justice\ActionGUI.class
+justice\ActionSuggestion.class
