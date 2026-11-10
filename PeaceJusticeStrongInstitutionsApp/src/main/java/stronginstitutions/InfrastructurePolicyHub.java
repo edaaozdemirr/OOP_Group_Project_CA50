@@ -28,31 +28,905 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        policyRadionBtn = new javax.swing.ButtonGroup();
+        panelFilters = new javax.swing.JPanel();
+        filtersLbl = new javax.swing.JLabel();
+        clearLbl = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jLabel4 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        panelFooter = new javax.swing.JPanel();
+        panelPolicy = new javax.swing.JPanel();
+        policyHeader = new javax.swing.JPanel();
+        policyLbl = new javax.swing.JLabel();
+        policyScroll = new javax.swing.JScrollPane();
+        consultationPanel = new javax.swing.JPanel();
+        policyCard1 = new javax.swing.JPanel();
+        openLbl = new javax.swing.JLabel();
+        titleLbl = new javax.swing.JLabel();
+        policyTitle = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        policyDiscription = new javax.swing.JTextArea();
+        participationLbl = new javax.swing.JLabel();
+        policyBtn1 = new javax.swing.JRadioButton();
+        policyBtn2 = new javax.swing.JRadioButton();
+        policyBtn3 = new javax.swing.JRadioButton();
+        policyParticipateBtn = new javax.swing.JButton();
+        policyCard2 = new javax.swing.JPanel();
+        openLbl1 = new javax.swing.JLabel();
+        titleLbl1 = new javax.swing.JLabel();
+        policyTitle1 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        policyDiscription1 = new javax.swing.JTextArea();
+        participationLbl1 = new javax.swing.JLabel();
+        policyBtn4 = new javax.swing.JRadioButton();
+        policyBtn5 = new javax.swing.JRadioButton();
+        policyBtn6 = new javax.swing.JRadioButton();
+        policyParticipateBtn1 = new javax.swing.JButton();
+        policyCard3 = new javax.swing.JPanel();
+        openLbl2 = new javax.swing.JLabel();
+        titleLbl2 = new javax.swing.JLabel();
+        policyTitle2 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        policyDiscription2 = new javax.swing.JTextArea();
+        participationLbl2 = new javax.swing.JLabel();
+        policyBtn7 = new javax.swing.JRadioButton();
+        policyBtn8 = new javax.swing.JRadioButton();
+        policyBtn9 = new javax.swing.JRadioButton();
+        policyParticipateBtn2 = new javax.swing.JButton();
+        panelProjects = new javax.swing.JPanel();
+        headerPanel = new javax.swing.JPanel();
+        infasLbl = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        panelProjectList = new javax.swing.JPanel();
+        project1 = new javax.swing.JPanel();
+        imgPlaceHolder = new javax.swing.JPanel();
+        progressLbl = new javax.swing.JLabel();
+        TitleLbl = new javax.swing.JLabel();
+        locationLbl = new javax.swing.JLabel();
+        budgetLbl = new javax.swing.JLabel();
+        dateLbl = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        descriptionArea = new javax.swing.JTextArea();
+        project2 = new javax.swing.JPanel();
+        imgPlaceHolder1 = new javax.swing.JPanel();
+        progressLbl1 = new javax.swing.JLabel();
+        TitleLbl1 = new javax.swing.JLabel();
+        locationLbl1 = new javax.swing.JLabel();
+        budgetLbl1 = new javax.swing.JLabel();
+        dateLbl1 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        descriptionArea1 = new javax.swing.JTextArea();
+        project3 = new javax.swing.JPanel();
+        imgPlaceHolder2 = new javax.swing.JPanel();
+        progressLbl2 = new javax.swing.JLabel();
+        TitleLbl2 = new javax.swing.JLabel();
+        locationLbl2 = new javax.swing.JLabel();
+        budgetLbl2 = new javax.swing.JLabel();
+        dateLbl2 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        descriptionArea2 = new javax.swing.JTextArea();
+        project4 = new javax.swing.JPanel();
+        imgPlaceHolder3 = new javax.swing.JPanel();
+        progressLbl3 = new javax.swing.JLabel();
+        TitleLbl3 = new javax.swing.JLabel();
+        locationLbl3 = new javax.swing.JLabel();
+        budgetLbl3 = new javax.swing.JLabel();
+        dateLbl3 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        descriptionArea3 = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
+        nav1Btn = new javax.swing.JButton();
+        nav2Btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
+        setMinimumSize(new java.awt.Dimension(1200, 800));
 
-        jLabel1.setText("jLabel1");
+        panelFilters.setBackground(new java.awt.Color(204, 204, 204));
+        panelFilters.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(241, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(122, 122, 122))
+        filtersLbl.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        filtersLbl.setText("Filters");
+
+        clearLbl.setForeground(new java.awt.Color(0, 0, 153));
+        clearLbl.setText("Clear All");
+
+        jLabel1.setText("Project Type");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Types", "Roads", "Bridges", "Railways" }));
+
+        jLabel2.setText("Sectors");
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel3.setText("Status");
+
+        jCheckBox1.setText("jCheckBox1");
+
+        jCheckBox2.setText("jCheckBox2");
+
+        jCheckBox3.setText("jCheckBox3");
+
+        jCheckBox4.setText("jCheckBox4");
+
+        jCheckBox5.setText("jCheckBox5");
+
+        jLabel4.setText("Location");
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel5.setText("Budget");
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.addActionListener(this::jComboBox4ActionPerformed);
+
+        jLabel6.setText("Sort");
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButton1.setText("Reset");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+
+        jButton2.setText("Apply Filters");
+
+        javax.swing.GroupLayout panelFiltersLayout = new javax.swing.GroupLayout(panelFilters);
+        panelFilters.setLayout(panelFiltersLayout);
+        panelFiltersLayout.setHorizontalGroup(
+            panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelFiltersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCheckBox5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelFiltersLayout.createSequentialGroup()
+                        .addGroup(panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelFiltersLayout.createSequentialGroup()
+                                .addComponent(filtersLbl)
+                                .addGap(18, 18, 18)
+                                .addComponent(clearLbl))
+                            .addComponent(jLabel3))
+                        .addGap(0, 44, Short.MAX_VALUE))
+                    .addGroup(panelFiltersLayout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(107, 107, 107)
+        panelFiltersLayout.setVerticalGroup(
+            panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelFiltersLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filtersLbl)
+                    .addComponent(clearLbl))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
+
+        getContentPane().add(panelFilters, java.awt.BorderLayout.LINE_START);
+
+        panelFooter.setBackground(new java.awt.Color(204, 255, 255));
+        panelFooter.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+
+        javax.swing.GroupLayout panelFooterLayout = new javax.swing.GroupLayout(panelFooter);
+        panelFooter.setLayout(panelFooterLayout);
+        panelFooterLayout.setHorizontalGroup(
+            panelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1373, Short.MAX_VALUE)
+        );
+        panelFooterLayout.setVerticalGroup(
+            panelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(panelFooter, java.awt.BorderLayout.PAGE_END);
+
+        panelPolicy.setBackground(new java.awt.Color(204, 204, 204));
+
+        policyLbl.setText("Policy Consultations");
+
+        javax.swing.GroupLayout policyHeaderLayout = new javax.swing.GroupLayout(policyHeader);
+        policyHeader.setLayout(policyHeaderLayout);
+        policyHeaderLayout.setHorizontalGroup(
+            policyHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyHeaderLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(policyLbl)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        policyHeaderLayout.setVerticalGroup(
+            policyHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyHeaderLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(policyLbl)
+                .addContainerGap(70, Short.MAX_VALUE))
+        );
+
+        consultationPanel.setLayout(new javax.swing.BoxLayout(consultationPanel, javax.swing.BoxLayout.Y_AXIS));
+
+        openLbl.setText("Open");
+
+        titleLbl.setText("Close in 18 days");
+
+        policyTitle.setText("Title");
+
+        policyDiscription.setColumns(20);
+        policyDiscription.setRows(5);
+        jScrollPane2.setViewportView(policyDiscription);
+
+        participationLbl.setText("Your Participation");
+
+        policyRadionBtn.add(policyBtn1);
+        policyBtn1.setText("Not Participated");
+
+        policyRadionBtn.add(policyBtn2);
+        policyBtn2.setText("In Progress");
+
+        policyRadionBtn.add(policyBtn3);
+        policyBtn3.setText("Submitted");
+
+        policyParticipateBtn.setText("Participate Now");
+
+        javax.swing.GroupLayout policyCard1Layout = new javax.swing.GroupLayout(policyCard1);
+        policyCard1.setLayout(policyCard1Layout);
+        policyCard1Layout.setHorizontalGroup(
+            policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyCard1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(policyCard1Layout.createSequentialGroup()
+                        .addComponent(openLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addComponent(titleLbl))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(policyCard1Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(policyParticipateBtn)
+                            .addGroup(policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(policyTitle)
+                                .addComponent(participationLbl)
+                                .addComponent(policyBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(policyBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(policyBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        policyCard1Layout.setVerticalGroup(
+            policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyCard1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(openLbl)
+                    .addComponent(titleLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(policyTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(participationLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyParticipateBtn)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        consultationPanel.add(policyCard1);
+
+        openLbl1.setText("Open");
+
+        titleLbl1.setText("Close in 18 days");
+
+        policyTitle1.setText("Title");
+
+        policyDiscription1.setColumns(20);
+        policyDiscription1.setRows(5);
+        jScrollPane7.setViewportView(policyDiscription1);
+
+        participationLbl1.setText("Your Participation");
+
+        policyRadionBtn.add(policyBtn4);
+        policyBtn4.setText("Not Participated");
+
+        policyRadionBtn.add(policyBtn5);
+        policyBtn5.setText("In Progress");
+
+        policyRadionBtn.add(policyBtn6);
+        policyBtn6.setText("Submitted");
+
+        policyParticipateBtn1.setText("Participate Now");
+
+        javax.swing.GroupLayout policyCard2Layout = new javax.swing.GroupLayout(policyCard2);
+        policyCard2.setLayout(policyCard2Layout);
+        policyCard2Layout.setHorizontalGroup(
+            policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyCard2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(policyCard2Layout.createSequentialGroup()
+                        .addComponent(openLbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addComponent(titleLbl1))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(policyCard2Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(policyParticipateBtn1)
+                            .addGroup(policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(policyTitle1)
+                                .addComponent(participationLbl1)
+                                .addComponent(policyBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(policyBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(policyBtn6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        policyCard2Layout.setVerticalGroup(
+            policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyCard2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(openLbl1)
+                    .addComponent(titleLbl1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(policyTitle1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(participationLbl1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyParticipateBtn1)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        consultationPanel.add(policyCard2);
+
+        openLbl2.setText("Open");
+
+        titleLbl2.setText("Close in 18 days");
+
+        policyTitle2.setText("Title");
+
+        policyDiscription2.setColumns(20);
+        policyDiscription2.setRows(5);
+        jScrollPane8.setViewportView(policyDiscription2);
+
+        participationLbl2.setText("Your Participation");
+
+        policyRadionBtn.add(policyBtn7);
+        policyBtn7.setText("Not Participated");
+
+        policyRadionBtn.add(policyBtn8);
+        policyBtn8.setText("In Progress");
+
+        policyRadionBtn.add(policyBtn9);
+        policyBtn9.setText("Submitted");
+
+        policyParticipateBtn2.setText("Participate Now");
+
+        javax.swing.GroupLayout policyCard3Layout = new javax.swing.GroupLayout(policyCard3);
+        policyCard3.setLayout(policyCard3Layout);
+        policyCard3Layout.setHorizontalGroup(
+            policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyCard3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(policyCard3Layout.createSequentialGroup()
+                        .addComponent(openLbl2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addComponent(titleLbl2))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(policyCard3Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(policyParticipateBtn2)
+                            .addGroup(policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(policyTitle2)
+                                .addComponent(participationLbl2)
+                                .addComponent(policyBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(policyBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(policyBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        policyCard3Layout.setVerticalGroup(
+            policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(policyCard3Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(openLbl2)
+                    .addComponent(titleLbl2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(policyTitle2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(participationLbl2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyBtn9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyParticipateBtn2)
+                .addContainerGap(594, Short.MAX_VALUE))
+        );
+
+        consultationPanel.add(policyCard3);
+
+        policyScroll.setViewportView(consultationPanel);
+
+        javax.swing.GroupLayout panelPolicyLayout = new javax.swing.GroupLayout(panelPolicy);
+        panelPolicy.setLayout(panelPolicyLayout);
+        panelPolicyLayout.setHorizontalGroup(
+            panelPolicyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPolicyLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelPolicyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(policyHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(policyScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        panelPolicyLayout.setVerticalGroup(
+            panelPolicyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPolicyLayout.createSequentialGroup()
+                .addComponent(policyHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(policyScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(panelPolicy, java.awt.BorderLayout.LINE_END);
+
+        panelProjects.setBackground(new java.awt.Color(204, 204, 204));
+        panelProjects.setLayout(new java.awt.BorderLayout());
+
+        infasLbl.setText("Infastructure Projects");
+
+        javax.swing.GroupLayout headerPanelLayout = new javax.swing.GroupLayout(headerPanel);
+        headerPanel.setLayout(headerPanelLayout);
+        headerPanelLayout.setHorizontalGroup(
+            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(infasLbl)
+                .addContainerGap(904, Short.MAX_VALUE))
+        );
+        headerPanelLayout.setVerticalGroup(
+            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerPanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(infasLbl)
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+
+        panelProjects.add(headerPanel, java.awt.BorderLayout.PAGE_START);
+
+        panelProjectList.setLayout(new javax.swing.BoxLayout(panelProjectList, javax.swing.BoxLayout.Y_AXIS));
+
+        project1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project1.setMaximumSize(new java.awt.Dimension(32767, 200));
+        project1.setMinimumSize(new java.awt.Dimension(300, 200));
+        project1.setPreferredSize(new java.awt.Dimension(600, 200));
+
+        imgPlaceHolder.setBackground(new java.awt.Color(102, 102, 102));
+
+        javax.swing.GroupLayout imgPlaceHolderLayout = new javax.swing.GroupLayout(imgPlaceHolder);
+        imgPlaceHolder.setLayout(imgPlaceHolderLayout);
+        imgPlaceHolderLayout.setHorizontalGroup(
+            imgPlaceHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 155, Short.MAX_VALUE)
+        );
+        imgPlaceHolderLayout.setVerticalGroup(
+            imgPlaceHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+        );
+
+        progressLbl.setText("In Progress");
+
+        TitleLbl.setText("Title");
+
+        locationLbl.setText("Location");
+
+        budgetLbl.setText("Budget");
+
+        dateLbl.setText("Date");
+
+        descriptionArea.setColumns(20);
+        descriptionArea.setRows(5);
+        jScrollPane3.setViewportView(descriptionArea);
+
+        javax.swing.GroupLayout project1Layout = new javax.swing.GroupLayout(project1);
+        project1.setLayout(project1Layout);
+        project1Layout.setHorizontalGroup(
+            project1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(imgPlaceHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(project1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(progressLbl)
+                    .addComponent(TitleLbl)
+                    .addComponent(locationLbl)
+                    .addGroup(project1Layout.createSequentialGroup()
+                        .addComponent(budgetLbl)
+                        .addGap(59, 59, 59)
+                        .addComponent(dateLbl))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(589, Short.MAX_VALUE))
+        );
+        project1Layout.setVerticalGroup(
+            project1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(project1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(project1Layout.createSequentialGroup()
+                        .addComponent(progressLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TitleLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(locationLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(project1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(budgetLbl)
+                            .addComponent(dateLbl)))
+                    .addComponent(imgPlaceHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelProjectList.add(project1);
+
+        project2.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project2.setMaximumSize(new java.awt.Dimension(32767, 200));
+        project2.setMinimumSize(new java.awt.Dimension(300, 200));
+        project2.setPreferredSize(new java.awt.Dimension(600, 200));
+
+        imgPlaceHolder1.setBackground(new java.awt.Color(102, 102, 102));
+
+        javax.swing.GroupLayout imgPlaceHolder1Layout = new javax.swing.GroupLayout(imgPlaceHolder1);
+        imgPlaceHolder1.setLayout(imgPlaceHolder1Layout);
+        imgPlaceHolder1Layout.setHorizontalGroup(
+            imgPlaceHolder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 155, Short.MAX_VALUE)
+        );
+        imgPlaceHolder1Layout.setVerticalGroup(
+            imgPlaceHolder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+        );
+
+        progressLbl1.setText("In Progress");
+
+        TitleLbl1.setText("Title");
+
+        locationLbl1.setText("Location");
+
+        budgetLbl1.setText("Budget");
+
+        dateLbl1.setText("Date");
+
+        descriptionArea1.setColumns(20);
+        descriptionArea1.setRows(5);
+        jScrollPane4.setViewportView(descriptionArea1);
+
+        javax.swing.GroupLayout project2Layout = new javax.swing.GroupLayout(project2);
+        project2.setLayout(project2Layout);
+        project2Layout.setHorizontalGroup(
+            project2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(imgPlaceHolder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(project2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(progressLbl1)
+                    .addComponent(TitleLbl1)
+                    .addComponent(locationLbl1)
+                    .addGroup(project2Layout.createSequentialGroup()
+                        .addComponent(budgetLbl1)
+                        .addGap(59, 59, 59)
+                        .addComponent(dateLbl1))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(589, Short.MAX_VALUE))
+        );
+        project2Layout.setVerticalGroup(
+            project2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project2Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(project2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(project2Layout.createSequentialGroup()
+                        .addComponent(progressLbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TitleLbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(locationLbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(project2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(budgetLbl1)
+                            .addComponent(dateLbl1)))
+                    .addComponent(imgPlaceHolder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelProjectList.add(project2);
+
+        project3.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project3.setMaximumSize(new java.awt.Dimension(32767, 200));
+        project3.setMinimumSize(new java.awt.Dimension(300, 200));
+        project3.setPreferredSize(new java.awt.Dimension(600, 200));
+
+        imgPlaceHolder2.setBackground(new java.awt.Color(102, 102, 102));
+
+        javax.swing.GroupLayout imgPlaceHolder2Layout = new javax.swing.GroupLayout(imgPlaceHolder2);
+        imgPlaceHolder2.setLayout(imgPlaceHolder2Layout);
+        imgPlaceHolder2Layout.setHorizontalGroup(
+            imgPlaceHolder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 155, Short.MAX_VALUE)
+        );
+        imgPlaceHolder2Layout.setVerticalGroup(
+            imgPlaceHolder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+        );
+
+        progressLbl2.setText("In Progress");
+
+        TitleLbl2.setText("Title");
+
+        locationLbl2.setText("Location");
+
+        budgetLbl2.setText("Budget");
+
+        dateLbl2.setText("Date");
+
+        descriptionArea2.setColumns(20);
+        descriptionArea2.setRows(5);
+        jScrollPane5.setViewportView(descriptionArea2);
+
+        javax.swing.GroupLayout project3Layout = new javax.swing.GroupLayout(project3);
+        project3.setLayout(project3Layout);
+        project3Layout.setHorizontalGroup(
+            project3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(imgPlaceHolder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(project3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(progressLbl2)
+                    .addComponent(TitleLbl2)
+                    .addComponent(locationLbl2)
+                    .addGroup(project3Layout.createSequentialGroup()
+                        .addComponent(budgetLbl2)
+                        .addGap(59, 59, 59)
+                        .addComponent(dateLbl2))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(589, Short.MAX_VALUE))
+        );
+        project3Layout.setVerticalGroup(
+            project3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project3Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(project3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(project3Layout.createSequentialGroup()
+                        .addComponent(progressLbl2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TitleLbl2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(locationLbl2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(project3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(budgetLbl2)
+                            .addComponent(dateLbl2)))
+                    .addComponent(imgPlaceHolder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelProjectList.add(project3);
+
+        project4.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project4.setMaximumSize(new java.awt.Dimension(32767, 200));
+        project4.setMinimumSize(new java.awt.Dimension(300, 200));
+        project4.setPreferredSize(new java.awt.Dimension(600, 200));
+
+        imgPlaceHolder3.setBackground(new java.awt.Color(102, 102, 102));
+
+        javax.swing.GroupLayout imgPlaceHolder3Layout = new javax.swing.GroupLayout(imgPlaceHolder3);
+        imgPlaceHolder3.setLayout(imgPlaceHolder3Layout);
+        imgPlaceHolder3Layout.setHorizontalGroup(
+            imgPlaceHolder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 155, Short.MAX_VALUE)
+        );
+        imgPlaceHolder3Layout.setVerticalGroup(
+            imgPlaceHolder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
+        );
+
+        progressLbl3.setText("In Progress");
+
+        TitleLbl3.setText("Title");
+
+        locationLbl3.setText("Location");
+
+        budgetLbl3.setText("Budget");
+
+        dateLbl3.setText("Date");
+
+        descriptionArea3.setColumns(20);
+        descriptionArea3.setRows(5);
+        jScrollPane6.setViewportView(descriptionArea3);
+
+        javax.swing.GroupLayout project4Layout = new javax.swing.GroupLayout(project4);
+        project4.setLayout(project4Layout);
+        project4Layout.setHorizontalGroup(
+            project4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(imgPlaceHolder3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(project4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(progressLbl3)
+                    .addComponent(TitleLbl3)
+                    .addGroup(project4Layout.createSequentialGroup()
+                        .addComponent(budgetLbl3)
+                        .addGap(59, 59, 59)
+                        .addComponent(dateLbl3))
+                    .addGroup(project4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(locationLbl3)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(589, Short.MAX_VALUE))
+        );
+        project4Layout.setVerticalGroup(
+            project4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(project4Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(project4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(project4Layout.createSequentialGroup()
+                        .addComponent(progressLbl3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TitleLbl3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(locationLbl3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(project4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(budgetLbl3)
+                            .addComponent(dateLbl3)))
+                    .addComponent(imgPlaceHolder3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelProjectList.add(project4);
+
+        jScrollPane1.setViewportView(panelProjectList);
+
+        panelProjects.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+
+        nav1Btn.setText("1");
+        nav1Btn.addActionListener(this::nav1BtnActionPerformed);
+
+        nav2Btn.setText("2");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(326, 326, 326)
+                .addComponent(nav1Btn)
+                .addGap(27, 27, 27)
+                .addComponent(nav2Btn)
+                .addContainerGap(631, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nav1Btn)
+                    .addComponent(nav2Btn))
+                .addGap(27, 27, 27))
+        );
+
+        panelProjects.add(jPanel1, java.awt.BorderLayout.PAGE_END);
+
+        getContentPane().add(panelProjects, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void nav1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nav1BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nav1BtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,6 +954,110 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel TitleLbl;
+    private javax.swing.JLabel TitleLbl1;
+    private javax.swing.JLabel TitleLbl2;
+    private javax.swing.JLabel TitleLbl3;
+    private javax.swing.JLabel budgetLbl;
+    private javax.swing.JLabel budgetLbl1;
+    private javax.swing.JLabel budgetLbl2;
+    private javax.swing.JLabel budgetLbl3;
+    private javax.swing.JLabel clearLbl;
+    private javax.swing.JPanel consultationPanel;
+    private javax.swing.JLabel dateLbl;
+    private javax.swing.JLabel dateLbl1;
+    private javax.swing.JLabel dateLbl2;
+    private javax.swing.JLabel dateLbl3;
+    private javax.swing.JTextArea descriptionArea;
+    private javax.swing.JTextArea descriptionArea1;
+    private javax.swing.JTextArea descriptionArea2;
+    private javax.swing.JTextArea descriptionArea3;
+    private javax.swing.JLabel filtersLbl;
+    private javax.swing.JPanel headerPanel;
+    private javax.swing.JPanel imgPlaceHolder;
+    private javax.swing.JPanel imgPlaceHolder1;
+    private javax.swing.JPanel imgPlaceHolder2;
+    private javax.swing.JPanel imgPlaceHolder3;
+    private javax.swing.JLabel infasLbl;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JLabel locationLbl;
+    private javax.swing.JLabel locationLbl1;
+    private javax.swing.JLabel locationLbl2;
+    private javax.swing.JLabel locationLbl3;
+    private javax.swing.JButton nav1Btn;
+    private javax.swing.JButton nav2Btn;
+    private javax.swing.JLabel openLbl;
+    private javax.swing.JLabel openLbl1;
+    private javax.swing.JLabel openLbl2;
+    private javax.swing.JPanel panelFilters;
+    private javax.swing.JPanel panelFooter;
+    private javax.swing.JPanel panelPolicy;
+    private javax.swing.JPanel panelProjectList;
+    private javax.swing.JPanel panelProjects;
+    private javax.swing.JLabel participationLbl;
+    private javax.swing.JLabel participationLbl1;
+    private javax.swing.JLabel participationLbl2;
+    private javax.swing.JRadioButton policyBtn1;
+    private javax.swing.JRadioButton policyBtn2;
+    private javax.swing.JRadioButton policyBtn3;
+    private javax.swing.JRadioButton policyBtn4;
+    private javax.swing.JRadioButton policyBtn5;
+    private javax.swing.JRadioButton policyBtn6;
+    private javax.swing.JRadioButton policyBtn7;
+    private javax.swing.JRadioButton policyBtn8;
+    private javax.swing.JRadioButton policyBtn9;
+    private javax.swing.JPanel policyCard1;
+    private javax.swing.JPanel policyCard2;
+    private javax.swing.JPanel policyCard3;
+    private javax.swing.JTextArea policyDiscription;
+    private javax.swing.JTextArea policyDiscription1;
+    private javax.swing.JTextArea policyDiscription2;
+    private javax.swing.JPanel policyHeader;
+    private javax.swing.JLabel policyLbl;
+    private javax.swing.JButton policyParticipateBtn;
+    private javax.swing.JButton policyParticipateBtn1;
+    private javax.swing.JButton policyParticipateBtn2;
+    private javax.swing.ButtonGroup policyRadionBtn;
+    private javax.swing.JScrollPane policyScroll;
+    private javax.swing.JLabel policyTitle;
+    private javax.swing.JLabel policyTitle1;
+    private javax.swing.JLabel policyTitle2;
+    private javax.swing.JLabel progressLbl;
+    private javax.swing.JLabel progressLbl1;
+    private javax.swing.JLabel progressLbl2;
+    private javax.swing.JLabel progressLbl3;
+    private javax.swing.JPanel project1;
+    private javax.swing.JPanel project2;
+    private javax.swing.JPanel project3;
+    private javax.swing.JPanel project4;
+    private javax.swing.JLabel titleLbl;
+    private javax.swing.JLabel titleLbl1;
+    private javax.swing.JLabel titleLbl2;
     // End of variables declaration//GEN-END:variables
 }
