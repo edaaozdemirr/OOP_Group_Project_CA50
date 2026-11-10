@@ -4,6 +4,11 @@
  */
 package justice;
 import main.MainDashboard;
+import globalPeace.Donations;
+import globalPeace.PeaceBuilderInfoFrame;
+import stronginstitutions.InstitutionViewerFrame;
+import stronginstitutions.AuditFeedbackForm;
+import stronginstitutions.InfrastructurePolicyHub;
 
 /**
  *
@@ -91,13 +96,19 @@ public class CasesGUI extends javax.swing.JFrame {
         jButton16 = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu4 = new javax.swing.JMenu();
+        MenuBar = new javax.swing.JMenuBar();
+        main = new javax.swing.JMenu();
+        dashboard = new javax.swing.JMenuItem();
+        globalPeace = new javax.swing.JMenu();
+        donations = new javax.swing.JMenuItem();
+        info = new javax.swing.JMenuItem();
+        justice = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
+        strongInstitutions = new javax.swing.JMenu();
+        metricViewer = new javax.swing.JMenuItem();
+        auditFeedback = new javax.swing.JMenuItem();
+        infastructurePolicy = new javax.swing.JMenuItem();
 
         jLabel8.setText("Airey v. Ireland\t");
 
@@ -244,29 +255,55 @@ public class CasesGUI extends javax.swing.JFrame {
 
         jButton16.setText("OK");
 
-        jMenu4.setText("Main");
+        main.setText("Main");
 
-        jMenuItem2.setText("Dashboard");
+        dashboard.setText("Main dashboard");
+        dashboard.addActionListener(this::dashboardActionPerformed);
+        main.add(dashboard);
+
+        MenuBar.add(main);
+
+        globalPeace.setText("Global Peace");
+
+        donations.setText("Donations");
+        donations.addActionListener(this::donationsActionPerformed);
+        globalPeace.add(donations);
+
+        info.setText("Info");
+        info.addActionListener(this::infoActionPerformed);
+        globalPeace.add(info);
+
+        MenuBar.add(globalPeace);
+
+        justice.setText("Justice");
+
+        jMenuItem4.setText("Take Action Form");
+        jMenuItem4.addActionListener(this::jMenuItem4ActionPerformed);
+        justice.add(jMenuItem4);
+
+        jMenuItem2.setText("Explore Cases");
         jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
-        jMenu4.add(jMenuItem2);
+        justice.add(jMenuItem2);
 
-        jMenuBar1.add(jMenu4);
+        MenuBar.add(justice);
 
-        jMenu1.setText("Global Peace");
-        jMenuBar1.add(jMenu1);
+        strongInstitutions.setText("Strong Institutions");
 
-        jMenu2.setText("Justice");
+        metricViewer.setText("Institution Performance & Metric Viewer");
+        metricViewer.addActionListener(this::metricViewerActionPerformed);
+        strongInstitutions.add(metricViewer);
 
-        jMenuItem3.setText("Take Action Form");
-        jMenuItem3.addActionListener(this::jMenuItem3ActionPerformed);
-        jMenu2.add(jMenuItem3);
+        auditFeedback.setText("Audit Feedback Form");
+        auditFeedback.addActionListener(this::auditFeedbackActionPerformed);
+        strongInstitutions.add(auditFeedback);
 
-        jMenuBar1.add(jMenu2);
+        infastructurePolicy.setText("Infastructure Policy Hub");
+        infastructurePolicy.addActionListener(this::infastructurePolicyActionPerformed);
+        strongInstitutions.add(infastructurePolicy);
 
-        jMenu3.setText("Strong Institutions");
-        jMenuBar1.add(jMenu3);
+        MenuBar.add(strongInstitutions);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(MenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -549,18 +586,54 @@ public class CasesGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        MainDashboard mainmenu = new MainDashboard();
-        mainmenu.setVisible(true); //Make the GUI frame visible on the screen
-        this.dispose(); 
-                              
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardActionPerformed
+        MainDashboard mainDash = new MainDashboard();
+        mainDash.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_dashboardActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void donationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donationsActionPerformed
+        Donations donateForm = new Donations();
+        donateForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_donationsActionPerformed
+
+    private void infoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoActionPerformed
+        PeaceBuilderInfoFrame PeaceInfoForm = new PeaceBuilderInfoFrame();
+        PeaceInfoForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_infoActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         ActionGUI actionForm = new ActionGUI();
         actionForm.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        CasesGUI casesForm = new CasesGUI();
+        casesForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void metricViewerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metricViewerActionPerformed
+        //Creating a new instance of the GUI
+        InstitutionViewerFrame viewerFrame = new InstitutionViewerFrame();
+        viewerFrame.setVisible(true); //Make the GUI frame visible on the screen
+        this.dispose();      //closes the main dashboard
+    }//GEN-LAST:event_metricViewerActionPerformed
+
+    private void auditFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_auditFeedbackActionPerformed
+        AuditFeedbackForm feedbackForm = new AuditFeedbackForm();
+        feedbackForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_auditFeedbackActionPerformed
+
+    private void infastructurePolicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infastructurePolicyActionPerformed
+        InfrastructurePolicyHub policyHub = new InfrastructurePolicyHub();
+        policyHub.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_infastructurePolicyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -588,6 +661,13 @@ public class CasesGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar MenuBar;
+    private javax.swing.JMenuItem auditFeedback;
+    private javax.swing.JMenuItem dashboard;
+    private javax.swing.JMenuItem donations;
+    private javax.swing.JMenu globalPeace;
+    private javax.swing.JMenuItem infastructurePolicy;
+    private javax.swing.JMenuItem info;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -622,14 +702,9 @@ public class CasesGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -657,5 +732,9 @@ public class CasesGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JMenu justice;
+    private javax.swing.JMenu main;
+    private javax.swing.JMenuItem metricViewer;
+    private javax.swing.JMenu strongInstitutions;
     // End of variables declaration//GEN-END:variables
 }

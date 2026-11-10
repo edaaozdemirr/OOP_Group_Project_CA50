@@ -40,7 +40,7 @@ public class MainDashboard extends javax.swing.JFrame {
         globalPeace = new javax.swing.JMenu();
         donations = new javax.swing.JMenuItem();
         info = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
+        justice = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         strongInstitutions = new javax.swing.JMenu();
@@ -62,17 +62,17 @@ public class MainDashboard extends javax.swing.JFrame {
 
         MenuBar.add(globalPeace);
 
-        jMenu1.setText("Justice");
+        justice.setText("Justice");
 
         jMenuItem1.setText("Take Action Form");
         jMenuItem1.addActionListener(this::jMenuItem1ActionPerformed);
-        jMenu1.add(jMenuItem1);
+        justice.add(jMenuItem1);
 
         jMenuItem2.setText("Explore Cases");
         jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
-        jMenu1.add(jMenuItem2);
+        justice.add(jMenuItem2);
 
-        MenuBar.add(jMenu1);
+        MenuBar.add(justice);
 
         strongInstitutions.setText("Strong Institutions");
 
@@ -182,9 +182,9 @@ public class MainDashboard extends javax.swing.JFrame {
     private javax.swing.JMenu globalPeace;
     private javax.swing.JMenuItem infastructurePolicy;
     private javax.swing.JMenuItem info;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenu justice;
     private javax.swing.JMenuItem metricViewer;
     private javax.swing.JMenu strongInstitutions;
     // End of variables declaration//GEN-END:variables

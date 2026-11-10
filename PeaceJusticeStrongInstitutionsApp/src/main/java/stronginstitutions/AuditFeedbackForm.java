@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package stronginstitutions;
+import globalPeace.PeaceBuilderInfoFrame;
+import globalPeace.Donations;
+import justice.ActionGUI;
+import justice.CasesGUI;
+import main.MainDashboard;
 
 /**
  *
@@ -44,10 +49,19 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        MenuBar = new javax.swing.JMenuBar();
+        main = new javax.swing.JMenu();
+        dashboard = new javax.swing.JMenuItem();
+        globalPeace = new javax.swing.JMenu();
+        donations = new javax.swing.JMenuItem();
+        info = new javax.swing.JMenuItem();
+        justice = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        strongInstitutions = new javax.swing.JMenu();
+        metricViewer = new javax.swing.JMenuItem();
+        auditFeedback = new javax.swing.JMenuItem();
+        infastructurePolicy = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,16 +109,55 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 102, 0));
         jLabel7.setText("Audit Feedback");
 
-        jMenu1.setText("Golbal Peace");
-        jMenuBar1.add(jMenu1);
+        main.setText("Main");
 
-        jMenu2.setText("Justice ");
-        jMenuBar1.add(jMenu2);
+        dashboard.setText("Main dashboard");
+        dashboard.addActionListener(this::dashboardActionPerformed);
+        main.add(dashboard);
 
-        jMenu3.setText("Strong Institutions");
-        jMenuBar1.add(jMenu3);
+        MenuBar.add(main);
 
-        setJMenuBar(jMenuBar1);
+        globalPeace.setText("Global Peace");
+
+        donations.setText("Donations");
+        donations.addActionListener(this::donationsActionPerformed);
+        globalPeace.add(donations);
+
+        info.setText("Info");
+        info.addActionListener(this::infoActionPerformed);
+        globalPeace.add(info);
+
+        MenuBar.add(globalPeace);
+
+        justice.setText("Justice");
+
+        jMenuItem1.setText("Take Action Form");
+        jMenuItem1.addActionListener(this::jMenuItem1ActionPerformed);
+        justice.add(jMenuItem1);
+
+        jMenuItem2.setText("Explore Cases");
+        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
+        justice.add(jMenuItem2);
+
+        MenuBar.add(justice);
+
+        strongInstitutions.setText("Strong Institutions");
+
+        metricViewer.setText("Institution Performance & Metric Viewer");
+        metricViewer.addActionListener(this::metricViewerActionPerformed);
+        strongInstitutions.add(metricViewer);
+
+        auditFeedback.setText("Audit Feedback Form");
+        auditFeedback.addActionListener(this::auditFeedbackActionPerformed);
+        strongInstitutions.add(auditFeedback);
+
+        infastructurePolicy.setText("Infastructure Policy Hub");
+        infastructurePolicy.addActionListener(this::infastructurePolicyActionPerformed);
+        strongInstitutions.add(infastructurePolicy);
+
+        MenuBar.add(strongInstitutions);
+
+        setJMenuBar(MenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -201,6 +254,55 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void donationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donationsActionPerformed
+        Donations donateForm = new Donations();
+        donateForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_donationsActionPerformed
+
+    private void infoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoActionPerformed
+        PeaceBuilderInfoFrame PeaceInfoForm = new PeaceBuilderInfoFrame();
+        PeaceInfoForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_infoActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        ActionGUI actionForm = new ActionGUI();
+        actionForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        CasesGUI casesForm = new CasesGUI();
+        casesForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void metricViewerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metricViewerActionPerformed
+        //Creating a new instance of the GUI
+        InstitutionViewerFrame viewerFrame = new InstitutionViewerFrame();
+        viewerFrame.setVisible(true); //Make the GUI frame visible on the screen
+        this.dispose();      //closes the main dashboard
+    }//GEN-LAST:event_metricViewerActionPerformed
+
+    private void auditFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_auditFeedbackActionPerformed
+        AuditFeedbackForm feedbackForm = new AuditFeedbackForm();
+        feedbackForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_auditFeedbackActionPerformed
+
+    private void infastructurePolicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infastructurePolicyActionPerformed
+        InfrastructurePolicyHub policyHub = new InfrastructurePolicyHub();
+        policyHub.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_infastructurePolicyActionPerformed
+
+    private void dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardActionPerformed
+        MainDashboard mainDash = new MainDashboard();
+        mainDash.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_dashboardActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -227,6 +329,13 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar MenuBar;
+    private javax.swing.JMenuItem auditFeedback;
+    private javax.swing.JMenuItem dashboard;
+    private javax.swing.JMenuItem donations;
+    private javax.swing.JMenu globalPeace;
+    private javax.swing.JMenuItem infastructurePolicy;
+    private javax.swing.JMenuItem info;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -238,14 +347,16 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JMenu justice;
+    private javax.swing.JMenu main;
+    private javax.swing.JMenuItem metricViewer;
+    private javax.swing.JMenu strongInstitutions;
     // End of variables declaration//GEN-END:variables
 }
