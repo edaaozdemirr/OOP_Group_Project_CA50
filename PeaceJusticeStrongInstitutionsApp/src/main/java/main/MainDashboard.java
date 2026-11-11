@@ -36,6 +36,33 @@ public class MainDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        mainContentPanel = new javax.swing.JPanel();
+        heroPanel = new javax.swing.JPanel();
+        mainTitleLbl = new javax.swing.JLabel();
+        mainDiscriptionLbl = new javax.swing.JLabel();
+        cardPanel = new javax.swing.JPanel();
+        card1 = new javax.swing.JPanel();
+        imagePlaceholder = new javax.swing.JPanel();
+        cardContent = new javax.swing.JPanel();
+        cardBtn = new javax.swing.JButton();
+        cardTitle = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        cardDiscription = new javax.swing.JTextArea();
+        card2 = new javax.swing.JPanel();
+        imagePlaceholder3 = new javax.swing.JPanel();
+        cardContent3 = new javax.swing.JPanel();
+        cardBtn3 = new javax.swing.JButton();
+        cardTitle3 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        cardDiscription3 = new javax.swing.JTextArea();
+        card3 = new javax.swing.JPanel();
+        imagePlaceholder4 = new javax.swing.JPanel();
+        cardContent4 = new javax.swing.JPanel();
+        cardBtn4 = new javax.swing.JButton();
+        cardTitle4 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        cardDiscription4 = new javax.swing.JTextArea();
         MenuBar = new javax.swing.JMenuBar();
         globalPeace = new javax.swing.JMenu();
         donations = new javax.swing.JMenuItem();
@@ -49,6 +76,253 @@ public class MainDashboard extends javax.swing.JFrame {
         infastructurePolicy = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(950, 650));
+        setPreferredSize(new java.awt.Dimension(1200, 800));
+
+        jScrollPane1.setBorder(null);
+
+        mainContentPanel.setLayout(new javax.swing.BoxLayout(mainContentPanel, javax.swing.BoxLayout.Y_AXIS));
+
+        heroPanel.setMaximumSize(new java.awt.Dimension(32767, 180));
+        heroPanel.setPreferredSize(new java.awt.Dimension(1200, 180));
+
+        mainTitleLbl.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
+        mainTitleLbl.setForeground(new java.awt.Color(0, 51, 153));
+        mainTitleLbl.setText("Building a Better World for All");
+
+        mainDiscriptionLbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        mainDiscriptionLbl.setForeground(new java.awt.Color(102, 102, 102));
+        mainDiscriptionLbl.setText("Explore how peace, justice and Strong Institutions.....");
+
+        javax.swing.GroupLayout heroPanelLayout = new javax.swing.GroupLayout(heroPanel);
+        heroPanel.setLayout(heroPanelLayout);
+        heroPanelLayout.setHorizontalGroup(
+            heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(heroPanelLayout.createSequentialGroup()
+                .addGroup(heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(heroPanelLayout.createSequentialGroup()
+                        .addGap(332, 332, 332)
+                        .addComponent(mainTitleLbl))
+                    .addGroup(heroPanelLayout.createSequentialGroup()
+                        .addGap(420, 420, 420)
+                        .addComponent(mainDiscriptionLbl)))
+                .addContainerGap(387, Short.MAX_VALUE))
+        );
+        heroPanelLayout.setVerticalGroup(
+            heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(heroPanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(mainTitleLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mainDiscriptionLbl)
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+
+        mainContentPanel.add(heroPanel);
+
+        cardPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(50, 50, 20, 50));
+        cardPanel.setMinimumSize(new java.awt.Dimension(900, 500));
+        cardPanel.setPreferredSize(new java.awt.Dimension(1200, 500));
+        cardPanel.setLayout(new java.awt.GridLayout(1, 3, 30, 0));
+
+        card1.setLayout(new java.awt.BorderLayout());
+
+        imagePlaceholder.setBackground(new java.awt.Color(255, 204, 153));
+        imagePlaceholder.setPreferredSize(new java.awt.Dimension(300, 200));
+
+        javax.swing.GroupLayout imagePlaceholderLayout = new javax.swing.GroupLayout(imagePlaceholder);
+        imagePlaceholder.setLayout(imagePlaceholderLayout);
+        imagePlaceholderLayout.setHorizontalGroup(
+            imagePlaceholderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 355, Short.MAX_VALUE)
+        );
+        imagePlaceholderLayout.setVerticalGroup(
+            imagePlaceholderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+
+        card1.add(imagePlaceholder, java.awt.BorderLayout.NORTH);
+
+        cardContent.setBackground(new java.awt.Color(255, 255, 255));
+        cardContent.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        cardBtn.setText("Global Peace");
+        cardBtn.addActionListener(this::cardBtnActionPerformed);
+
+        cardTitle.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cardTitle.setText("Global Peace");
+        cardTitle.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        cardTitle.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        cardDiscription.setColumns(20);
+        cardDiscription.setRows(5);
+        jScrollPane5.setViewportView(cardDiscription);
+
+        javax.swing.GroupLayout cardContentLayout = new javax.swing.GroupLayout(cardContent);
+        cardContent.setLayout(cardContentLayout);
+        cardContentLayout.setHorizontalGroup(
+            cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cardContentLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addGroup(cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cardTitle)
+                    .addComponent(cardBtn))
+                .addGap(85, 107, Short.MAX_VALUE))
+            .addGroup(cardContentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5)
+                .addContainerGap())
+        );
+        cardContentLayout.setVerticalGroup(
+            cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cardContentLayout.createSequentialGroup()
+                .addComponent(cardTitle)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(cardBtn)
+                .addContainerGap())
+        );
+
+        card1.add(cardContent, java.awt.BorderLayout.CENTER);
+
+        cardPanel.add(card1);
+
+        card2.setLayout(new java.awt.BorderLayout());
+
+        imagePlaceholder3.setBackground(new java.awt.Color(51, 255, 204));
+        imagePlaceholder3.setPreferredSize(new java.awt.Dimension(300, 200));
+
+        javax.swing.GroupLayout imagePlaceholder3Layout = new javax.swing.GroupLayout(imagePlaceholder3);
+        imagePlaceholder3.setLayout(imagePlaceholder3Layout);
+        imagePlaceholder3Layout.setHorizontalGroup(
+            imagePlaceholder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 355, Short.MAX_VALUE)
+        );
+        imagePlaceholder3Layout.setVerticalGroup(
+            imagePlaceholder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+
+        card2.add(imagePlaceholder3, java.awt.BorderLayout.NORTH);
+
+        cardContent3.setBackground(new java.awt.Color(255, 255, 255));
+        cardContent3.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        cardBtn3.setText("Justice");
+        cardBtn3.addActionListener(this::cardBtn3ActionPerformed);
+
+        cardTitle3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cardTitle3.setText("Justice");
+        cardTitle3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        cardTitle3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        cardDiscription3.setColumns(20);
+        cardDiscription3.setRows(5);
+        jScrollPane6.setViewportView(cardDiscription3);
+
+        javax.swing.GroupLayout cardContent3Layout = new javax.swing.GroupLayout(cardContent3);
+        cardContent3.setLayout(cardContent3Layout);
+        cardContent3Layout.setHorizontalGroup(
+            cardContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cardContent3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cardContent3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cardBtn3)
+                .addGap(115, 115, 115))
+            .addGroup(cardContent3Layout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(cardTitle3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cardContent3Layout.setVerticalGroup(
+            cardContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cardContent3Layout.createSequentialGroup()
+                .addComponent(cardTitle3)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(cardBtn3)
+                .addContainerGap())
+        );
+
+        card2.add(cardContent3, java.awt.BorderLayout.CENTER);
+
+        cardPanel.add(card2);
+
+        card3.setLayout(new java.awt.BorderLayout());
+
+        imagePlaceholder4.setBackground(new java.awt.Color(102, 255, 153));
+        imagePlaceholder4.setPreferredSize(new java.awt.Dimension(300, 200));
+
+        javax.swing.GroupLayout imagePlaceholder4Layout = new javax.swing.GroupLayout(imagePlaceholder4);
+        imagePlaceholder4.setLayout(imagePlaceholder4Layout);
+        imagePlaceholder4Layout.setHorizontalGroup(
+            imagePlaceholder4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 355, Short.MAX_VALUE)
+        );
+        imagePlaceholder4Layout.setVerticalGroup(
+            imagePlaceholder4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+
+        card3.add(imagePlaceholder4, java.awt.BorderLayout.NORTH);
+
+        cardContent4.setBackground(new java.awt.Color(255, 255, 255));
+        cardContent4.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        cardBtn4.setText("Strong Institutions");
+        cardBtn4.addActionListener(this::cardBtn4ActionPerformed);
+
+        cardTitle4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cardTitle4.setText("Strong Institutions");
+        cardTitle4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        cardTitle4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        cardDiscription4.setColumns(20);
+        cardDiscription4.setRows(5);
+        jScrollPane7.setViewportView(cardDiscription4);
+
+        javax.swing.GroupLayout cardContent4Layout = new javax.swing.GroupLayout(cardContent4);
+        cardContent4.setLayout(cardContent4Layout);
+        cardContent4Layout.setHorizontalGroup(
+            cardContent4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cardContent4Layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(cardBtn4)
+                .addGap(104, 104, Short.MAX_VALUE))
+            .addGroup(cardContent4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane7)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cardContent4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cardTitle4)
+                .addGap(73, 73, 73))
+        );
+        cardContent4Layout.setVerticalGroup(
+            cardContent4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cardContent4Layout.createSequentialGroup()
+                .addComponent(cardTitle4)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(cardBtn4)
+                .addContainerGap())
+        );
+
+        card3.add(cardContent4, java.awt.BorderLayout.CENTER);
+
+        cardPanel.add(card3);
+
+        mainContentPanel.add(cardPanel);
+
+        jScrollPane1.setViewportView(mainContentPanel);
+
+        getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         globalPeace.setText("Global Peace");
 
@@ -91,17 +365,6 @@ public class MainDashboard extends javax.swing.JFrame {
         MenuBar.add(strongInstitutions);
 
         setJMenuBar(MenuBar);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -150,6 +413,24 @@ public class MainDashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void cardBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtn3ActionPerformed
+        ActionGUI actionForm = new ActionGUI();
+        actionForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cardBtn3ActionPerformed
+
+    private void cardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtnActionPerformed
+        Donations donateForm = new Donations();
+        donateForm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cardBtnActionPerformed
+
+    private void cardBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtn4ActionPerformed
+        InstitutionViewerFrame viewerFrame = new InstitutionViewerFrame();
+        viewerFrame.setVisible(true); //Make the GUI frame visible on the screen
+        this.dispose();
+    }//GEN-LAST:event_cardBtn4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -178,13 +459,40 @@ public class MainDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar MenuBar;
     private javax.swing.JMenuItem auditFeedback;
+    private javax.swing.JPanel card1;
+    private javax.swing.JPanel card2;
+    private javax.swing.JPanel card3;
+    private javax.swing.JButton cardBtn;
+    private javax.swing.JButton cardBtn3;
+    private javax.swing.JButton cardBtn4;
+    private javax.swing.JPanel cardContent;
+    private javax.swing.JPanel cardContent3;
+    private javax.swing.JPanel cardContent4;
+    private javax.swing.JTextArea cardDiscription;
+    private javax.swing.JTextArea cardDiscription3;
+    private javax.swing.JTextArea cardDiscription4;
+    private javax.swing.JPanel cardPanel;
+    private javax.swing.JLabel cardTitle;
+    private javax.swing.JLabel cardTitle3;
+    private javax.swing.JLabel cardTitle4;
     private javax.swing.JMenuItem donations;
     private javax.swing.JMenu globalPeace;
+    private javax.swing.JPanel heroPanel;
+    private javax.swing.JPanel imagePlaceholder;
+    private javax.swing.JPanel imagePlaceholder3;
+    private javax.swing.JPanel imagePlaceholder4;
     private javax.swing.JMenuItem infastructurePolicy;
     private javax.swing.JMenuItem info;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JMenu justice;
+    private javax.swing.JPanel mainContentPanel;
+    private javax.swing.JLabel mainDiscriptionLbl;
+    private javax.swing.JLabel mainTitleLbl;
     private javax.swing.JMenuItem metricViewer;
     private javax.swing.JMenu strongInstitutions;
     // End of variables declaration//GEN-END:variables
