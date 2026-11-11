@@ -35,22 +35,22 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        titleLbl = new javax.swing.JLabel();
+        discriptionLbl = new javax.swing.JLabel();
+        viewReportBtn = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        instituteDetailsLbl = new javax.swing.JLabel();
+        activeLbl = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        findPublicLbl = new javax.swing.JLabel();
+        searchTextField = new javax.swing.JTextField();
+        typesBox = new javax.swing.JComboBox<>();
+        regionsBox = new javax.swing.JComboBox<>();
+        ratingsBox = new javax.swing.JComboBox<>();
+        searchBtn = new javax.swing.JButton();
+        resetBtn = new javax.swing.JButton();
         MenuBar = new javax.swing.JMenuBar();
         main = new javax.swing.JMenu();
         dashboard = new javax.swing.JMenuItem();
@@ -91,48 +91,48 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
-        jLabel1.setText("Public Institution And Governance viewer");
+        titleLbl.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
+        titleLbl.setText("Public Institution And Governance viewer");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
-        jLabel2.setText("Explore the institutions that are responsible");
+        discriptionLbl.setFont(new java.awt.Font("Segoe UI Emoji", 0, 18)); // NOI18N
+        discriptionLbl.setText("Explore the institutions that are responsible");
 
-        jButton2.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
-        jButton2.setText("View Full Report\n");
-        jButton2.setActionCommand("View Full Report\n");
-        jButton2.addActionListener(this::jButton2ActionPerformed);
+        viewReportBtn.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
+        viewReportBtn.setText("View Full Report\n");
+        viewReportBtn.setActionCommand("View Full Report\n");
+        viewReportBtn.addActionListener(this::viewReportBtnActionPerformed);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("Health Service Executive\nHealthcare Board\nRegion: Ireland\n\n\nTranparency Rating: \nResource Efficiency\nAudit Compliance\nFounded\nWebsite\nSummary\n\n\n");
         jScrollPane3.setViewportView(jTextArea1);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
-        jLabel3.setText("Institution Details");
+        instituteDetailsLbl.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
+        instituteDetailsLbl.setText("Institution Details");
 
-        jToggleButton1.setText("Active\n");
+        activeLbl.setText("Active\n");
 
         jTextPane1.setText("Recent Report Summary\n");
         jScrollPane1.setViewportView(jTextPane1);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
-        jLabel4.setText("Find Public Institutions");
+        findPublicLbl.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
+        findPublicLbl.setText("Find Public Institutions");
 
-        jTextField1.setText("Search by name\n");
-        jTextField1.addActionListener(this::jTextField1ActionPerformed);
+        searchTextField.setText("Search by name\n");
+        searchTextField.addActionListener(this::searchTextFieldActionPerformed);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Types", "Healthcare Board", "Education Board", "Public Entity" }));
-        jComboBox1.addActionListener(this::jComboBox1ActionPerformed);
+        typesBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Types", "Healthcare Board", "Education Board", "Public Entity" }));
+        typesBox.addActionListener(this::typesBoxActionPerformed);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Regions", "Ireland", "European Union", " " }));
-        jComboBox2.addActionListener(this::jComboBox2ActionPerformed);
+        regionsBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Regions", "Ireland", "European Union", " " }));
+        regionsBox.addActionListener(this::regionsBoxActionPerformed);
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Ratings", "Highest Transparency", "Highest Efficiency", "Highest Compliance" }));
-        jComboBox3.addActionListener(this::jComboBox3ActionPerformed);
+        ratingsBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Ratings", "Highest Transparency", "Highest Efficiency", "Highest Compliance" }));
+        ratingsBox.addActionListener(this::ratingsBoxActionPerformed);
 
-        jButton1.setText("Search\n");
+        searchBtn.setText("Search\n");
 
-        jButton3.setText("Reset");
+        resetBtn.setText("Reset");
 
         main.setText("Main");
 
@@ -191,29 +191,29 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
+                    .addComponent(titleLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(discriptionLbl)
+                    .addComponent(findPublicLbl)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(searchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(typesBox, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(regionsBox, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ratingsBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButton1)
+                            .addComponent(searchBtn)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButton3))))
+                            .addComponent(resetBtn))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(54, 54, 54)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(instituteDetailsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton1))
+                        .addComponent(activeLbl))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -222,35 +222,35 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
-                        .addComponent(jButton2)))
+                        .addComponent(viewReportBtn)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(titleLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(discriptionLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(findPublicLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jToggleButton1))
+                            .addComponent(instituteDetailsLbl)
+                            .addComponent(activeLbl))
                         .addGap(8, 8, 8)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton3))
+                            .addComponent(searchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(typesBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(regionsBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ratingsBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(searchBtn)
+                            .addComponent(resetBtn))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -258,32 +258,32 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)))
+                        .addComponent(viewReportBtn)))
                 .addGap(21, 21, 21))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void viewReportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewReportBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_viewReportBtnActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_searchTextFieldActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void typesBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typesBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_typesBoxActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void ratingsBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ratingsBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_ratingsBoxActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void regionsBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regionsBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_regionsBoxActionPerformed
 
     private void dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardActionPerformed
         MainDashboard mainDash = new MainDashboard();
@@ -361,22 +361,16 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar MenuBar;
+    private javax.swing.JToggleButton activeLbl;
     private javax.swing.JMenuItem auditFeedback;
     private javax.swing.JMenuItem dashboard;
+    private javax.swing.JLabel discriptionLbl;
     private javax.swing.JMenuItem donations;
+    private javax.swing.JLabel findPublicLbl;
     private javax.swing.JMenu globalPeace;
     private javax.swing.JMenuItem infastructurePolicy;
     private javax.swing.JMenuItem info;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel instituteDetailsLbl;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -384,12 +378,18 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JMenu justice;
     private javax.swing.JMenu main;
     private javax.swing.JMenuItem metricViewer;
+    private javax.swing.JComboBox<String> ratingsBox;
+    private javax.swing.JComboBox<String> regionsBox;
+    private javax.swing.JButton resetBtn;
+    private javax.swing.JButton searchBtn;
+    private javax.swing.JTextField searchTextField;
     private javax.swing.JMenu strongInstitutions;
+    private javax.swing.JLabel titleLbl;
+    private javax.swing.JComboBox<String> typesBox;
+    private javax.swing.JButton viewReportBtn;
     // End of variables declaration//GEN-END:variables
 }

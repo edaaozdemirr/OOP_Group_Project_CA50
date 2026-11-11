@@ -33,22 +33,22 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        auditLbl = new javax.swing.JLabel();
+        auditTF = new javax.swing.JTextField();
+        discriptionLbl = new javax.swing.JLabel();
+        nameLbl = new javax.swing.JLabel();
+        nameTF = new javax.swing.JTextField();
+        targetInsLbl = new javax.swing.JLabel();
+        issueDisLbl = new javax.swing.JLabel();
+        dateLbl = new javax.swing.JLabel();
+        targetInstBox = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        issueDisTF = new javax.swing.JTextField();
+        dateTF = new javax.swing.JTextField();
+        saveBtn = new javax.swing.JButton();
+        viewBtn = new javax.swing.JButton();
+        clearBtn = new javax.swing.JButton();
+        titleLbl = new javax.swing.JLabel();
         MenuBar = new javax.swing.JMenuBar();
         main = new javax.swing.JMenu();
         dashboard = new javax.swing.JMenuItem();
@@ -65,49 +65,49 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Audit ID :");
+        auditLbl.setText("Audit ID :");
 
-        jTextField3.setText("1001");
-        jTextField3.addActionListener(this::jTextField3ActionPerformed);
+        auditTF.setText("1001");
+        auditTF.addActionListener(this::auditTFActionPerformed);
 
-        jLabel2.setFont(new java.awt.Font("SimSun-ExtB", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel2.setText("Submit and review audit feedback for government institutions");
+        discriptionLbl.setFont(new java.awt.Font("SimSun-ExtB", 0, 18)); // NOI18N
+        discriptionLbl.setForeground(new java.awt.Color(0, 102, 0));
+        discriptionLbl.setText("Submit and review audit feedback for government institutions");
 
-        jLabel3.setText("Citizen Name:");
+        nameLbl.setText("Citizen Name:");
 
-        jTextField4.setText("Sarah Joy");
-        jTextField4.addActionListener(this::jTextField4ActionPerformed);
+        nameTF.setText("Sarah Joy");
+        nameTF.addActionListener(this::nameTFActionPerformed);
 
-        jLabel4.setText("Target Institution:");
+        targetInsLbl.setText("Target Institution:");
 
-        jLabel5.setText("Issue Discription:");
+        issueDisLbl.setText("Issue Discription:");
 
-        jLabel6.setText("Date Submitted:");
+        dateLbl.setText("Date Submitted:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Department of Health", "Department of Education", "Dublin City Council", "Item 4" }));
-        jComboBox1.addActionListener(this::jComboBox1ActionPerformed);
+        targetInstBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Department of Health", "Department of Education", "Dublin City Council", "Item 4" }));
+        targetInstBox.addActionListener(this::targetInstBoxActionPerformed);
 
-        jScrollPane1.setViewportView(jTextField2);
+        jScrollPane1.setViewportView(issueDisTF);
 
-        jTextField6.setText("DD-MM-YYYY\n");
-        jTextField6.addActionListener(this::jTextField6ActionPerformed);
+        dateTF.setText("DD-MM-YYYY\n");
+        dateTF.addActionListener(this::dateTFActionPerformed);
 
-        jButton2.setBackground(new java.awt.Color(0, 191, 120));
-        jButton2.setText("Submit/Save");
-        jButton2.addActionListener(this::jButton2ActionPerformed);
+        saveBtn.setBackground(new java.awt.Color(0, 191, 120));
+        saveBtn.setText("Submit/Save");
+        saveBtn.addActionListener(this::saveBtnActionPerformed);
 
-        jButton1.setBackground(new java.awt.Color(128, 208, 239));
-        jButton1.setText("View/Display");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        viewBtn.setBackground(new java.awt.Color(128, 208, 239));
+        viewBtn.setText("View/Display");
+        viewBtn.addActionListener(this::viewBtnActionPerformed);
 
-        jButton3.setBackground(new java.awt.Color(66, 77, 224));
-        jButton3.setText("Clear\n");
+        clearBtn.setBackground(new java.awt.Color(66, 77, 224));
+        clearBtn.setText("Clear\n");
 
-        jLabel7.setBackground(new java.awt.Color(0, 51, 153));
-        jLabel7.setFont(new java.awt.Font("SimSun-ExtG", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel7.setText("Audit Feedback");
+        titleLbl.setBackground(new java.awt.Color(0, 51, 153));
+        titleLbl.setFont(new java.awt.Font("SimSun-ExtG", 0, 18)); // NOI18N
+        titleLbl.setForeground(new java.awt.Color(0, 102, 0));
+        titleLbl.setText("Audit Feedback");
 
         main.setText("Main");
 
@@ -165,94 +165,94 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton2)
+                .addComponent(saveBtn)
                 .addGap(88, 88, 88)
-                .addComponent(jButton1)
+                .addComponent(viewBtn)
                 .addGap(103, 103, 103)
-                .addComponent(jButton3)
+                .addComponent(clearBtn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(titleLbl, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(discriptionLbl, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel1))
+                            .addComponent(nameLbl)
+                            .addComponent(targetInsLbl)
+                            .addComponent(issueDisLbl)
+                            .addComponent(dateLbl)
+                            .addComponent(auditLbl))
                         .addGap(96, 96, 96)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(auditTF)
+                            .addComponent(nameTF)
+                            .addComponent(targetInstBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1)
-                            .addComponent(jTextField6))))
+                            .addComponent(dateTF))))
                 .addGap(63, 63, 63))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(discriptionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(auditLbl)
+                    .addComponent(auditTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nameLbl)
+                    .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(targetInsLbl)
+                    .addComponent(targetInstBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
+                    .addComponent(issueDisLbl)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(dateTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateLbl))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
+                    .addComponent(saveBtn)
+                    .addComponent(viewBtn)
+                    .addComponent(clearBtn))
                 .addGap(10, 10, 10))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void auditTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_auditTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_auditTFActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void nameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_nameTFActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void targetInstBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_targetInstBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_targetInstBoxActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void dateTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_dateTFActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_saveBtnActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void viewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_viewBtnActionPerformed
 
     private void donationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donationsActionPerformed
         Donations donateForm = new Donations();
@@ -331,32 +331,32 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar MenuBar;
     private javax.swing.JMenuItem auditFeedback;
+    private javax.swing.JLabel auditLbl;
+    private javax.swing.JTextField auditTF;
+    private javax.swing.JButton clearBtn;
     private javax.swing.JMenuItem dashboard;
+    private javax.swing.JLabel dateLbl;
+    private javax.swing.JTextField dateTF;
+    private javax.swing.JLabel discriptionLbl;
     private javax.swing.JMenuItem donations;
     private javax.swing.JMenu globalPeace;
     private javax.swing.JMenuItem infastructurePolicy;
     private javax.swing.JMenuItem info;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel issueDisLbl;
+    private javax.swing.JTextField issueDisTF;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JMenu justice;
     private javax.swing.JMenu main;
     private javax.swing.JMenuItem metricViewer;
+    private javax.swing.JLabel nameLbl;
+    private javax.swing.JTextField nameTF;
+    private javax.swing.JButton saveBtn;
     private javax.swing.JMenu strongInstitutions;
+    private javax.swing.JLabel targetInsLbl;
+    private javax.swing.JComboBox<String> targetInstBox;
+    private javax.swing.JLabel titleLbl;
+    private javax.swing.JButton viewBtn;
     // End of variables declaration//GEN-END:variables
 }

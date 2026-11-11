@@ -37,24 +37,24 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         panelFilters = new javax.swing.JPanel();
         filtersLbl = new javax.swing.JLabel();
         clearLbl = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        projectLbl = new javax.swing.JLabel();
+        projectDropdown = new javax.swing.JComboBox<>();
+        sectorsLbl = new javax.swing.JLabel();
+        sectorsDropdown = new javax.swing.JComboBox<>();
+        statusLbl = new javax.swing.JLabel();
+        allStatus = new javax.swing.JCheckBox();
+        completed = new javax.swing.JCheckBox();
+        onGoing = new javax.swing.JCheckBox();
+        planning = new javax.swing.JCheckBox();
+        onHold = new javax.swing.JCheckBox();
+        filterLocationLbl = new javax.swing.JLabel();
+        locationBox = new javax.swing.JComboBox<>();
+        filterBudgetLbl = new javax.swing.JLabel();
+        budgetBox = new javax.swing.JComboBox<>();
+        sortLbl = new javax.swing.JLabel();
+        sortBox = new javax.swing.JComboBox<>();
+        resetBtn = new javax.swing.JButton();
+        applyFiltersBtn = new javax.swing.JButton();
         panelFooter = new javax.swing.JPanel();
         panelPolicy = new javax.swing.JPanel();
         policyHeader = new javax.swing.JPanel();
@@ -135,7 +135,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         dateLbl3 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         descriptionArea3 = new javax.swing.JTextArea();
-        jPanel1 = new javax.swing.JPanel();
+        projectsPagesBtn = new javax.swing.JPanel();
         nav1Btn = new javax.swing.JButton();
         nav2Btn = new javax.swing.JButton();
         MenuBar = new javax.swing.JMenuBar();
@@ -165,43 +165,43 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         clearLbl.setForeground(new java.awt.Color(0, 0, 153));
         clearLbl.setText("Clear All");
 
-        jLabel1.setText("Project Type");
+        projectLbl.setText("Project Type");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Types", "Roads", "Bridges", "Railways" }));
+        projectDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Types", "Roads", "Bridges", "Railways" }));
 
-        jLabel2.setText("Sectors");
+        sectorsLbl.setText("Sectors");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        sectorsDropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel3.setText("Status");
+        statusLbl.setText("Status");
 
-        jCheckBox1.setText("jCheckBox1");
+        allStatus.setText("All Status");
 
-        jCheckBox2.setText("jCheckBox2");
+        completed.setText("Completed");
 
-        jCheckBox3.setText("jCheckBox3");
+        onGoing.setText("On going");
 
-        jCheckBox4.setText("jCheckBox4");
+        planning.setText("Planning");
 
-        jCheckBox5.setText("jCheckBox5");
+        onHold.setText("On Hold");
 
-        jLabel4.setText("Location");
+        filterLocationLbl.setText("Location");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        locationBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel5.setText("Budget");
+        filterBudgetLbl.setText("Budget");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.addActionListener(this::jComboBox4ActionPerformed);
+        budgetBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        budgetBox.addActionListener(this::budgetBoxActionPerformed);
 
-        jLabel6.setText("Sort");
+        sortLbl.setText("Sort");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        sortBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton1.setText("Reset");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        resetBtn.setText("Reset");
+        resetBtn.addActionListener(this::resetBtnActionPerformed);
 
-        jButton2.setText("Apply Filters");
+        applyFiltersBtn.setText("Apply Filters");
 
         javax.swing.GroupLayout panelFiltersLayout = new javax.swing.GroupLayout(panelFilters);
         panelFilters.setLayout(panelFiltersLayout);
@@ -210,33 +210,33 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
             .addGroup(panelFiltersLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(projectDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sectorsDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(allStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(completed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(onGoing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(planning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(onHold, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(projectLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sectorsLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(filterLocationLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(locationBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(filterBudgetLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(budgetBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sortLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sortBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelFiltersLayout.createSequentialGroup()
                         .addGroup(panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelFiltersLayout.createSequentialGroup()
                                 .addComponent(filtersLbl)
                                 .addGap(18, 18, 18)
                                 .addComponent(clearLbl))
-                            .addComponent(jLabel3))
+                            .addComponent(statusLbl))
                         .addGap(0, 44, Short.MAX_VALUE))
                     .addGroup(panelFiltersLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addComponent(resetBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(applyFiltersBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         panelFiltersLayout.setVerticalGroup(
@@ -247,42 +247,42 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                     .addComponent(filtersLbl)
                     .addComponent(clearLbl))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(projectLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(projectDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(sectorsLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sectorsDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(statusLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
+                .addComponent(allStatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(completed)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox3)
+                .addComponent(onGoing)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox4)
+                .addComponent(planning)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox5)
+                .addComponent(onHold)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(filterLocationLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(locationBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addComponent(filterBudgetLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(budgetBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addComponent(sortLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sortBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelFiltersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(resetBtn)
+                    .addComponent(applyFiltersBtn))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         getContentPane().add(panelFilters, java.awt.BorderLayout.LINE_START);
@@ -566,7 +566,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
             .addGroup(panelPolicyLayout.createSequentialGroup()
                 .addComponent(policyHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(policyScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                .addComponent(policyScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -899,35 +899,35 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         panelProjects.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        projectsPagesBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         nav1Btn.setText("1");
         nav1Btn.addActionListener(this::nav1BtnActionPerformed);
 
         nav2Btn.setText("2");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout projectsPagesBtnLayout = new javax.swing.GroupLayout(projectsPagesBtn);
+        projectsPagesBtn.setLayout(projectsPagesBtnLayout);
+        projectsPagesBtnLayout.setHorizontalGroup(
+            projectsPagesBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(projectsPagesBtnLayout.createSequentialGroup()
                 .addGap(326, 326, 326)
                 .addComponent(nav1Btn)
                 .addGap(27, 27, 27)
                 .addComponent(nav2Btn)
                 .addContainerGap(631, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        projectsPagesBtnLayout.setVerticalGroup(
+            projectsPagesBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, projectsPagesBtnLayout.createSequentialGroup()
                 .addContainerGap(50, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(projectsPagesBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nav1Btn)
                     .addComponent(nav2Btn))
                 .addGap(27, 27, 27))
         );
 
-        panelProjects.add(jPanel1, java.awt.BorderLayout.PAGE_END);
+        panelProjects.add(projectsPagesBtn, java.awt.BorderLayout.PAGE_END);
 
         getContentPane().add(panelProjects, java.awt.BorderLayout.CENTER);
 
@@ -984,13 +984,13 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+    private void budgetBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_budgetBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_budgetBoxActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_resetBtnActionPerformed
 
     private void nav1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nav1BtnActionPerformed
         // TODO add your handling code here:
@@ -1076,12 +1076,16 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JLabel TitleLbl1;
     private javax.swing.JLabel TitleLbl2;
     private javax.swing.JLabel TitleLbl3;
+    private javax.swing.JCheckBox allStatus;
+    private javax.swing.JButton applyFiltersBtn;
     private javax.swing.JMenuItem auditFeedback;
+    private javax.swing.JComboBox<String> budgetBox;
     private javax.swing.JLabel budgetLbl;
     private javax.swing.JLabel budgetLbl1;
     private javax.swing.JLabel budgetLbl2;
     private javax.swing.JLabel budgetLbl3;
     private javax.swing.JLabel clearLbl;
+    private javax.swing.JCheckBox completed;
     private javax.swing.JPanel consultationPanel;
     private javax.swing.JMenuItem dashboard;
     private javax.swing.JLabel dateLbl;
@@ -1093,6 +1097,8 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JTextArea descriptionArea2;
     private javax.swing.JTextArea descriptionArea3;
     private javax.swing.JMenuItem donations;
+    private javax.swing.JLabel filterBudgetLbl;
+    private javax.swing.JLabel filterLocationLbl;
     private javax.swing.JLabel filtersLbl;
     private javax.swing.JMenu globalPeace;
     private javax.swing.JPanel headerPanel;
@@ -1103,27 +1109,8 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JLabel infasLbl;
     private javax.swing.JMenuItem infastructurePolicy;
     private javax.swing.JMenuItem info;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1133,6 +1120,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JMenu justice;
+    private javax.swing.JComboBox<String> locationBox;
     private javax.swing.JLabel locationLbl;
     private javax.swing.JLabel locationLbl1;
     private javax.swing.JLabel locationLbl2;
@@ -1141,6 +1129,8 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JMenuItem metricViewer;
     private javax.swing.JButton nav1Btn;
     private javax.swing.JButton nav2Btn;
+    private javax.swing.JCheckBox onGoing;
+    private javax.swing.JCheckBox onHold;
     private javax.swing.JLabel openLbl;
     private javax.swing.JLabel openLbl1;
     private javax.swing.JLabel openLbl2;
@@ -1152,6 +1142,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JLabel participationLbl;
     private javax.swing.JLabel participationLbl1;
     private javax.swing.JLabel participationLbl2;
+    private javax.swing.JCheckBox planning;
     private javax.swing.JRadioButton policyBtn1;
     private javax.swing.JRadioButton policyBtn2;
     private javax.swing.JRadioButton policyBtn3;
@@ -1185,6 +1176,15 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JPanel project2;
     private javax.swing.JPanel project3;
     private javax.swing.JPanel project4;
+    private javax.swing.JComboBox<String> projectDropdown;
+    private javax.swing.JLabel projectLbl;
+    private javax.swing.JPanel projectsPagesBtn;
+    private javax.swing.JButton resetBtn;
+    private javax.swing.JComboBox<String> sectorsDropdown;
+    private javax.swing.JLabel sectorsLbl;
+    private javax.swing.JComboBox<String> sortBox;
+    private javax.swing.JLabel sortLbl;
+    private javax.swing.JLabel statusLbl;
     private javax.swing.JMenu strongInstitutions;
     private javax.swing.JLabel titleLbl;
     private javax.swing.JLabel titleLbl1;
