@@ -5,19 +5,27 @@
 package main;
 
 //importing the GUIs from the stronginstitutions java package
-import stronginstitutions.InstitutionViewerFrame;
-import stronginstitutions.InfrastructurePolicyHub;
-import stronginstitutions.AuditFeedbackForm;
-import globalPeace.PeaceBuilderInfoFrame;
+import java.util.ArrayList;
+
 import globalPeace.Donations;
+import globalPeace.PeaceBuilderInfoFrame;
 import justice.ActionGUI;
+import justice.Cases;
 import justice.CasesGUI;
+import justice.CasesNotes;
+import stronginstitutions.AuditFeedbackForm;
+import stronginstitutions.InfrastructurePolicyHub;
+import stronginstitutions.InstitutionViewerFrame;
+
 /**
  *
  * @author Nilantha
  */
 public class MainDashboard extends javax.swing.JFrame {
-    
+
+    private ArrayList<Cases> cases = new ArrayList<>();
+    private ArrayList<CasesNotes> notes = new ArrayList<>();
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainDashboard.class.getName());
 
     /**
@@ -97,25 +105,25 @@ public class MainDashboard extends javax.swing.JFrame {
         javax.swing.GroupLayout heroPanelLayout = new javax.swing.GroupLayout(heroPanel);
         heroPanel.setLayout(heroPanelLayout);
         heroPanelLayout.setHorizontalGroup(
-            heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(heroPanelLayout.createSequentialGroup()
-                .addGroup(heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(heroPanelLayout.createSequentialGroup()
-                        .addGap(332, 332, 332)
-                        .addComponent(mainTitleLbl))
-                    .addGroup(heroPanelLayout.createSequentialGroup()
-                        .addGap(420, 420, 420)
-                        .addComponent(mainDiscriptionLbl)))
-                .addContainerGap(387, Short.MAX_VALUE))
+                heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(heroPanelLayout.createSequentialGroup()
+                                .addGroup(heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(heroPanelLayout.createSequentialGroup()
+                                                .addGap(332, 332, 332)
+                                                .addComponent(mainTitleLbl))
+                                        .addGroup(heroPanelLayout.createSequentialGroup()
+                                                .addGap(420, 420, 420)
+                                                .addComponent(mainDiscriptionLbl)))
+                                .addContainerGap(387, Short.MAX_VALUE))
         );
         heroPanelLayout.setVerticalGroup(
-            heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(heroPanelLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(mainTitleLbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainDiscriptionLbl)
-                .addContainerGap(84, Short.MAX_VALUE))
+                heroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(heroPanelLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(mainTitleLbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(mainDiscriptionLbl)
+                                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         mainContentPanel.add(heroPanel);
@@ -133,12 +141,12 @@ public class MainDashboard extends javax.swing.JFrame {
         javax.swing.GroupLayout imagePlaceholderLayout = new javax.swing.GroupLayout(imagePlaceholder);
         imagePlaceholder.setLayout(imagePlaceholderLayout);
         imagePlaceholderLayout.setHorizontalGroup(
-            imagePlaceholderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 355, Short.MAX_VALUE)
+                imagePlaceholderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 355, Short.MAX_VALUE)
         );
         imagePlaceholderLayout.setVerticalGroup(
-            imagePlaceholderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+                imagePlaceholderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 200, Short.MAX_VALUE)
         );
 
         card1.add(imagePlaceholder, java.awt.BorderLayout.NORTH);
@@ -161,27 +169,27 @@ public class MainDashboard extends javax.swing.JFrame {
         javax.swing.GroupLayout cardContentLayout = new javax.swing.GroupLayout(cardContent);
         cardContent.setLayout(cardContentLayout);
         cardContentLayout.setHorizontalGroup(
-            cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cardContentLayout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addGroup(cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cardTitle)
-                    .addComponent(cardBtn))
-                .addGap(85, 107, Short.MAX_VALUE))
-            .addGroup(cardContentLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane5)
-                .addContainerGap())
+                cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(cardContentLayout.createSequentialGroup()
+                                .addGap(105, 105, 105)
+                                .addGroup(cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cardTitle)
+                                        .addComponent(cardBtn))
+                                .addGap(85, 107, Short.MAX_VALUE))
+                        .addGroup(cardContentLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane5)
+                                .addContainerGap())
         );
         cardContentLayout.setVerticalGroup(
-            cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cardContentLayout.createSequentialGroup()
-                .addComponent(cardTitle)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(cardBtn)
-                .addContainerGap())
+                cardContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(cardContentLayout.createSequentialGroup()
+                                .addComponent(cardTitle)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                                .addComponent(cardBtn)
+                                .addContainerGap())
         );
 
         card1.add(cardContent, java.awt.BorderLayout.CENTER);
@@ -196,12 +204,12 @@ public class MainDashboard extends javax.swing.JFrame {
         javax.swing.GroupLayout imagePlaceholder3Layout = new javax.swing.GroupLayout(imagePlaceholder3);
         imagePlaceholder3.setLayout(imagePlaceholder3Layout);
         imagePlaceholder3Layout.setHorizontalGroup(
-            imagePlaceholder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 355, Short.MAX_VALUE)
+                imagePlaceholder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 355, Short.MAX_VALUE)
         );
         imagePlaceholder3Layout.setVerticalGroup(
-            imagePlaceholder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+                imagePlaceholder3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 200, Short.MAX_VALUE)
         );
 
         card2.add(imagePlaceholder3, java.awt.BorderLayout.NORTH);
@@ -224,29 +232,29 @@ public class MainDashboard extends javax.swing.JFrame {
         javax.swing.GroupLayout cardContent3Layout = new javax.swing.GroupLayout(cardContent3);
         cardContent3.setLayout(cardContent3Layout);
         cardContent3Layout.setHorizontalGroup(
-            cardContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cardContent3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cardContent3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cardBtn3)
-                .addGap(115, 115, 115))
-            .addGroup(cardContent3Layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(cardTitle3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                cardContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(cardContent3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                                .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cardContent3Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cardBtn3)
+                                .addGap(115, 115, 115))
+                        .addGroup(cardContent3Layout.createSequentialGroup()
+                                .addGap(127, 127, 127)
+                                .addComponent(cardTitle3)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         cardContent3Layout.setVerticalGroup(
-            cardContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cardContent3Layout.createSequentialGroup()
-                .addComponent(cardTitle3)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(cardBtn3)
-                .addContainerGap())
+                cardContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(cardContent3Layout.createSequentialGroup()
+                                .addComponent(cardTitle3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                                .addComponent(cardBtn3)
+                                .addContainerGap())
         );
 
         card2.add(cardContent3, java.awt.BorderLayout.CENTER);
@@ -261,12 +269,12 @@ public class MainDashboard extends javax.swing.JFrame {
         javax.swing.GroupLayout imagePlaceholder4Layout = new javax.swing.GroupLayout(imagePlaceholder4);
         imagePlaceholder4.setLayout(imagePlaceholder4Layout);
         imagePlaceholder4Layout.setHorizontalGroup(
-            imagePlaceholder4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 355, Short.MAX_VALUE)
+                imagePlaceholder4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 355, Short.MAX_VALUE)
         );
         imagePlaceholder4Layout.setVerticalGroup(
-            imagePlaceholder4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+                imagePlaceholder4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 200, Short.MAX_VALUE)
         );
 
         card3.add(imagePlaceholder4, java.awt.BorderLayout.NORTH);
@@ -289,29 +297,29 @@ public class MainDashboard extends javax.swing.JFrame {
         javax.swing.GroupLayout cardContent4Layout = new javax.swing.GroupLayout(cardContent4);
         cardContent4.setLayout(cardContent4Layout);
         cardContent4Layout.setHorizontalGroup(
-            cardContent4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cardContent4Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(cardBtn4)
-                .addGap(104, 104, Short.MAX_VALUE))
-            .addGroup(cardContent4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane7)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cardContent4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cardTitle4)
-                .addGap(73, 73, 73))
+                cardContent4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(cardContent4Layout.createSequentialGroup()
+                                .addGap(105, 105, 105)
+                                .addComponent(cardBtn4)
+                                .addGap(104, 104, Short.MAX_VALUE))
+                        .addGroup(cardContent4Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane7)
+                                .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cardContent4Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cardTitle4)
+                                .addGap(73, 73, 73))
         );
         cardContent4Layout.setVerticalGroup(
-            cardContent4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cardContent4Layout.createSequentialGroup()
-                .addComponent(cardTitle4)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(cardBtn4)
-                .addContainerGap())
+                cardContent4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(cardContent4Layout.createSequentialGroup()
+                                .addComponent(cardTitle4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                                .addComponent(cardBtn4)
+                                .addContainerGap())
         );
 
         card3.add(cardContent4, java.awt.BorderLayout.CENTER);
@@ -370,6 +378,7 @@ public class MainDashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //Connecting the sections from Strong Institutions (Menomi)
     //Make use of menuItem
+
     private void metricViewerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metricViewerActionPerformed
         //Creating a new instance of the GUI 
         InstitutionViewerFrame viewerFrame = new InstitutionViewerFrame();
@@ -377,12 +386,14 @@ public class MainDashboard extends javax.swing.JFrame {
         this.dispose();      //closes the main dashboard
     }//GEN-LAST:event_metricViewerActionPerformed
     //The infastructure and Policy form section
+
     private void infastructurePolicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infastructurePolicyActionPerformed
         InfrastructurePolicyHub policyHub = new InfrastructurePolicyHub();
         policyHub.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_infastructurePolicyActionPerformed
     //Audit feedback form section
+
     private void auditFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_auditFeedbackActionPerformed
         AuditFeedbackForm feedbackForm = new AuditFeedbackForm();
         feedbackForm.setVisible(true);
