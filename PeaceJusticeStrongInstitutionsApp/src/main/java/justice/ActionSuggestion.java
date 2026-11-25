@@ -138,18 +138,24 @@ public class ActionSuggestion implements Summarizable {
             String selectedUrgency
                     = (String) urgencyLevelDropdown.getSelectedItem();
 
-            setValues(
-                    selectedProblem,
-                    selectedPersonAction,
-                    selectedFrequency,
-                    danger,
-                    willingToCommunicate,
-                    selectedUrgency
-            );
+        setValues(
+            selectedProblem,
+            selectedPersonAction,
+            selectedFrequency,
+            danger,
+            willingToCommunicate,
+            selectedUrgency
+        );
 
-            JOptionPane.showMessageDialog(
-                    guiPanel,
-                    "Assessment submitted successfully!"
+    // Calculate the assessment score
+    calculateAssessment();
+
+    // Display the assessment result
+    JOptionPane.showMessageDialog(
+            guiPanel,
+            "Assessment completed!\n\n"
+            + "Total Score: " + totalScore
+            + "\nDecision: " + decisionResult
             );
         });
     }
@@ -201,4 +207,79 @@ public class ActionSuggestion implements Summarizable {
                 + personWillingToCommunicate
                 + "\nUrgency: " + urgencyLevel;
     }
+    
+    
+    public void calculateAssessment() {
+
+        totalScore = 0;
+
+        // 1. Score the type of problem
+        if (problem.equals("fight")
+                || problem.equals("discrimination")
+                || problem.equals("harassment")
+                || problem.equals("human_rights_violation")) {
+
+            totalScore -= 1;
+
+        } else if (problem.equals("minor_disagreement")
+                || problem.equals("misunderstanding")
+                || problem.equals("accidental_damage")
+                || problem.equals("roommate_disagreement")) {
+
+            totalScore += 1;
+        }
+
+        // 2. Score the person's action
+        if (personAction.equals("physical")) {
+            totalScore -= 1;
+        } else if (personAction.equals("none")) {
+            totalScore += 1;
+        }
+
+        // 3. Score how often the problem happens
+        if (problemFrequency.equals("one_time")) {
+            totalScore += 1;
+        } else if (problemFrequency.equals("ongoing")) {
+            totalScore -= 1;
+        }
+
+        // 4. Score willingness to communicate
+        if (personWillingToCommunicate) {
+            totalScore += 1;
+        } else {
+            totalScore -= 1;
+        }
+
+        // 5. Score urgency
+        if (urgencyLevel.equals("low")) {
+            totalScore += 1;
+        } else if (urgencyLevel.equals("high")) {
+            totalScore -= 1;
+        }
+
+        // 6. Determine the final result
+        if (immediateDanger) {
+
+            decisionResult = "Support Organisation Needed";
+
+        } else if (totalScore > 0) {
+
+            decisionResult = "Can Be Solved By Person";
+
+        } else if (totalScore < 0) {
+
+            decisionResult = "Support Organisation Needed";
+
+        } else {
+
+            decisionResult = "Needs Further Assesment";
+        }
+    }
+    public String getDecisionResult() {
+        return decisionResult;
+    }
+    public int getTotalScore() {
+        return totalScore;
+    }
+
 }

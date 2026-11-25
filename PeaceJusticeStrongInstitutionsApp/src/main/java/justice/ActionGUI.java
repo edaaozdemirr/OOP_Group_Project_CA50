@@ -9,6 +9,7 @@ import globalPeace.PeaceBuilderInfoFrame;
 import stronginstitutions.InstitutionViewerFrame;
 import stronginstitutions.AuditFeedbackForm;
 import stronginstitutions.InfrastructurePolicyHub;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -23,6 +24,40 @@ public class ActionGUI extends javax.swing.JFrame {
      */
     public ActionGUI() {
         initComponents();
+        
+        // Immediate Danger checkboxes
+        jCheckBox1.addActionListener(e -> {
+            if (jCheckBox1.isSelected()) {
+                jCheckBox2.setSelected(false);
+            } else {
+                jCheckBox2.setSelected(true);
+            }
+        });
+
+        jCheckBox2.addActionListener(e -> {
+            if (jCheckBox2.isSelected()) {
+                jCheckBox1.setSelected(false);
+            } else {
+                jCheckBox1.setSelected(true);
+            }
+        });
+
+        // Communication checkboxes
+        jCheckBox3.addActionListener(e -> {
+            if (jCheckBox3.isSelected()) {
+                jCheckBox4.setSelected(false);
+            } else {
+                jCheckBox4.setSelected(true);
+            }
+        });
+
+        jCheckBox4.addActionListener(e -> {
+            if (jCheckBox4.isSelected()) {
+                jCheckBox3.setSelected(false);
+            } else {
+                jCheckBox3.setSelected(true);
+            }
+        });
     }
 
     /**
@@ -65,8 +100,6 @@ public class ActionGUI extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jComboBox4 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
@@ -154,20 +187,23 @@ public class ActionGUI extends javax.swing.JFrame {
         jButton1.setText("SUBMIT");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel10.setText("Action to take:");
-
-        jTextField3.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        jTextField3.setText("Can Be Solved By Person");
-        jTextField3.addActionListener(this::jTextField3ActionPerformed);
-
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setText("Resource Links:");
 
-        jTextField5.setText("http:/link.com");
+        jTextField5.setText("https://www.flac.ie/");
+        jTextField5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField5MouseClicked(evt);
+            }
+        });
         jTextField5.addActionListener(this::jTextField5ActionPerformed);
 
-        jTextField6.setText("http:/link2.com");
+        jTextField6.setText("https://www.crimevictimshelpline.ie/");
+        jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField6MouseClicked(evt);
+            }
+        });
         jTextField6.addActionListener(this::jTextField6ActionPerformed);
 
         jButton2.setText("Home");
@@ -231,23 +267,18 @@ public class ActionGUI extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(265, 265, 265)
                         .addComponent(jSeparator2))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)
-                                .addGap(21, 21, 21))))))
+                                .addComponent(jLabel11)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(21, 21, 21))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,11 +361,7 @@ public class ActionGUI extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(11, 11, 11)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
+                .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -367,23 +394,63 @@ public class ActionGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        String selectedProblem = jComboBox1.getSelectedItem().toString().toLowerCase().replace(" ", "_");
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+        if (selectedProblem.equals("harrasment")) {
+            selectedProblem = "harassment";
+        }
+
+        String selectedPersonAction =
+            jComboBox2.getSelectedItem().toString().toLowerCase();
+
+        String selectedFrequency = jComboBox3.getSelectedItem().toString();
+
+        String selectedUrgency =
+            jComboBox4.getSelectedItem().toString().toLowerCase();
+
+        boolean danger = jCheckBox1.isSelected();
+        boolean willingToCommunicate = jCheckBox3.isSelected();
+
+        // Create the assessment object
+        ActionSuggestion assessment = new ActionSuggestion();
+
+        // Send the GUI answers to ActionSuggestion
+        assessment.setValues(
+            selectedProblem,
+            selectedPersonAction,
+            selectedFrequency,
+            danger,
+            willingToCommunicate,
+            selectedUrgency
+        );
+
+        // Calculate the result
+        assessment.calculateAssessment();
+
+        // Update the Action to Take field
+        String decision = assessment.getDecisionResult();
+
+        // Display the result
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Assessment completed!\n\n"
+            + "Total Score: " + assessment.getTotalScore()
+            + "\nDecision: " + decision,
+            "Assessment Result",
+            javax.swing.JOptionPane.INFORMATION_MESSAGE
+        );
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardActionPerformed
@@ -441,6 +508,27 @@ public class ActionGUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jTextField5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(
+                new java.net.URI(jTextField5.getText())
+            );
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Unable to open the website.");
+        }
+    }//GEN-LAST:event_jTextField5MouseClicked
+
+    private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(
+                new java.net.URI(jTextField6.getText())
+            );
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                "Unable to open the website.");
+        }
+    }//GEN-LAST:event_jTextField6MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -490,7 +578,6 @@ public class ActionGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -511,7 +598,6 @@ public class ActionGUI extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
