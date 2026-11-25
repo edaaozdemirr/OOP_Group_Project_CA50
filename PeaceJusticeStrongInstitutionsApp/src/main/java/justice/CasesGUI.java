@@ -27,12 +27,6 @@ public class CasesGUI extends javax.swing.JFrame {
     /**
      * Creates new form CasesGUI
      */
-    public CasesGUI() {
-        initComponents();
-        loadCases();
-        displayCases();
-    }
-
     private void loadCases() {
 
         // General cases
@@ -114,6 +108,67 @@ public class CasesGUI extends javax.swing.JFrame {
         // Case 6
         jTextArea8.setText(casesList.get(5).getDescription());
         jTextField8.setText(casesList.get(5).getCaseLink());
+
+    }
+
+    private void filterCases() {
+
+        boolean showAll = jComboBox1.getSelectedItem().equals("All Cases");
+
+        // General Case 1
+        jLabel2.setVisible(showAll);
+        jLabel6.setVisible(showAll);
+        jTextField1.setVisible(showAll);
+        jScrollPane1.setVisible(showAll);
+        jButton1.setVisible(showAll);
+        jButton2.setVisible(showAll);
+
+        // General Case 2
+        jLabel3.setVisible(showAll);
+        jLabel7.setVisible(showAll);
+        jTextField2.setVisible(showAll);
+        jScrollPane2.setVisible(showAll);
+        jButton3.setVisible(showAll);
+        jButton4.setVisible(showAll);
+
+        // General Case 3
+        jLabel13.setVisible(showAll);
+        jLabel10.setVisible(showAll);
+        jTextField5.setVisible(showAll);
+        jScrollPane5.setVisible(showAll);
+        jButton12.setVisible(showAll);
+        jButton9.setVisible(showAll);
+    }
+
+    public CasesGUI() {
+        initComponents();
+        loadCases();
+        displayCases();
+
+        jButton2.addActionListener(e -> openCaseLink(jTextField1));
+        jButton4.addActionListener(e -> openCaseLink(jTextField2));
+        jButton9.addActionListener(e -> openCaseLink(jTextField5));
+
+        jButton11.addActionListener(e -> openCaseLink(jTextField6));
+        jButton14.addActionListener(e -> openCaseLink(jTextField7));
+        jButton16.addActionListener(e -> openCaseLink(jTextField8));
+
+        jComboBox1.addActionListener(e -> filterCases());
+    }
+
+    private void openCaseLink(javax.swing.JTextField linkField) {
+
+        try {
+            java.awt.Desktop.getDesktop().browse(
+                    new java.net.URI(linkField.getText())
+            );
+
+        } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Unable to open the case link."
+            );
+        }
     }
 
     /**
