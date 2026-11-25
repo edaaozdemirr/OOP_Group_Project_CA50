@@ -25,6 +25,7 @@ main\MainDashboard.class
 stronginstitutions\EducationalAuthority.class
 globalPeace\PeaceBuilderInfoFrame.class
 justice\ReportingAction.class
+justice\CasesGUI$1.class
 stronginstitutions\InstitutionViewerFrame$1.class
 justice\ActionGUI.class
 justice\ActionSuggestion.class
