@@ -6,6 +6,7 @@ stronginstitutions\AuditFeedbackForm.class
 stronginstitutions\InstitutionViewerFrame.class
 stronginstitutions\PolicyConsult.class
 globalPeace\Donations.class
+stronginstitutions\summarise.class
 stronginstitutions\PublicEntity.class
 justice\CasesGUI.class
 stronginstitutions\InfaProject.class
@@ -16,6 +17,7 @@ stronginstitutions\reportable.class
 justice\Cases.class
 globalPeace\DonationRecords.class
 stronginstitutions\HealthcareBoard.class
+stronginstitutions\StrongInstApp.class
 justice\CasesNotes.class
 main\MainDashboard.class
 stronginstitutions\EducationalAuthority.class
