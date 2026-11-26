@@ -2,12 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
+//Navigation menu imports
 package stronginstitutions;
 import globalPeace.Donations;
 import globalPeace.PeaceBuilderInfoFrame;
 import justice.ActionGUI;
 import justice.CasesGUI;
 import main.MainDashboard;
+
+//Imports for th functionality
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,13 +22,96 @@ import main.MainDashboard;
 public class InfrastructurePolicyHub extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InfrastructurePolicyHub.class.getName());
-
+    
+    private final ArrayList<PolicyConsult> masterPolicies = new ArrayList<>();
+    //private final ArrayList<PolicyConsult> displayedPolicies = new ArrayList<>();
+    private final ArrayList<ConsultSubmission> submissions = new ArrayList<>();
     /**
      * Creates new form InfrastructurePolicyHub
      */
     public InfrastructurePolicyHub() {
         initComponents();
+        loadInitialPolicies();
+        
     }
+    
+    //Pre loaded policies of the section
+    private void loadInitialPolicies(){
+        masterPolicies.clear();
+        
+        masterPolicies.add(new PolicyConsult(
+                "POL-01",
+                "Public Procurement Transparency Act",
+                "Requires public bodies to publish contract awards....",
+                "Link"
+        ));
+        masterPolicies.add(new PolicyConsult(
+                "POL-02",
+                "Public Procurement Transparency Act",
+                "Requires public bodies to publish contract awards....",
+                "Link"
+        ));
+        masterPolicies.add(new PolicyConsult(
+                "POL-03",
+                "Public Procurement Transparency Act",
+                "Requires public bodies to publish contract awards....",
+                "Link"
+        ));
+        
+        //refreshPolicyTable();
+        //refreshSubmissionDisplay();
+    }
+    
+    //adds the policy data into the GUI cards
+    private void syncPolicies(){
+        if (masterPolicies.size() > 0){
+            policyTitle2.setText(masterPolicies.get(0).getTitle());
+            policyCard1.setVisible(true);
+        }else{
+            policyCard1.setVisible(false);
+        }
+        
+        //card 2
+        if (masterPolicies.size() > 1){
+            policyTitle3.setText(masterPolicies.get(1).getTitle());
+            policyCard2.setVisible(true);
+        }else{
+            policyCard2.setVisible(false);
+        }
+        
+        //card 3
+        if (masterPolicies.size() > 2){
+            policyTitle3.setText(masterPolicies.get(2).getTitle());
+            policyCard3.setVisible(true);
+        }else{
+            policyCard3.setVisible(false);
+        }
+        
+        consultationPanel.revalidate();
+        consultationPanel.repaint();
+    }
+    
+    //The JOptionPane pop up form for the participate now button
+    
+    private void participationPopup(PolicyConsult selectedPolicy){
+        JtextArea summaryArea = new JTextArea(slectedPolicy.getSummary(), 3, 35);
+        summaryArea.setEditable(false);
+        summaryArea.setLineWrap(true);
+        summaryArea.setWrapStyle(true);
+        
+        JTextArea linksArea = new JTextArea(selectedPolicy.getReferenceLinks(), 2, 35);
+        linksArea.setEditable(false);
+        linksArea.setLineWrap(true);
+        linksArea.setWrapStyleWord(true);
+        
+        JRadioButton supportBtn = new JRadioButton("Support", true);
+        JRadioButton neutralBtn = new JRadioButton("Neutral");
+        JRadioButton opposeBtn = new JRadionButton("Oppose");
+    }
+    
+   
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -64,23 +153,17 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         policyCard1 = new javax.swing.JPanel();
         openLbl = new javax.swing.JLabel();
         titleLbl = new javax.swing.JLabel();
-        policyTitle = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        policyDiscription = new javax.swing.JTextArea();
+        policyTitle1 = new javax.swing.JLabel();
         policyParticipateBtn = new javax.swing.JButton();
         policyCard2 = new javax.swing.JPanel();
         openLbl1 = new javax.swing.JLabel();
         titleLbl1 = new javax.swing.JLabel();
-        policyTitle1 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        policyDiscription1 = new javax.swing.JTextArea();
+        policyTitle2 = new javax.swing.JLabel();
         policyParticipateBtn1 = new javax.swing.JButton();
         policyCard3 = new javax.swing.JPanel();
         openLbl2 = new javax.swing.JLabel();
         titleLbl2 = new javax.swing.JLabel();
-        policyTitle2 = new javax.swing.JLabel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        policyDiscription2 = new javax.swing.JTextArea();
+        policyTitle3 = new javax.swing.JLabel();
         policyParticipateBtn2 = new javax.swing.JButton();
         panelProjects = new javax.swing.JPanel();
         headerPanel = new javax.swing.JPanel();
@@ -283,7 +366,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         panelFooter.setLayout(panelFooterLayout);
         panelFooterLayout.setHorizontalGroup(
             panelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1373, Short.MAX_VALUE)
+            .addGap(0, 1379, Short.MAX_VALUE)
         );
         panelFooterLayout.setVerticalGroup(
             panelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,17 +383,17 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         policyHeader.setLayout(policyHeaderLayout);
         policyHeaderLayout.setHorizontalGroup(
             policyHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(policyHeaderLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, policyHeaderLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(policyLbl)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
         policyHeaderLayout.setVerticalGroup(
             policyHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(policyHeaderLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(42, 42, 42)
                 .addComponent(policyLbl)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         consultationPanel.setLayout(new javax.swing.BoxLayout(consultationPanel, javax.swing.BoxLayout.Y_AXIS));
@@ -319,11 +402,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         titleLbl.setText("Close in 18 days");
 
-        policyTitle.setText("Title");
-
-        policyDiscription.setColumns(20);
-        policyDiscription.setRows(5);
-        jScrollPane2.setViewportView(policyDiscription);
+        policyTitle1.setText("Title");
 
         policyParticipateBtn.setText("Participate Now");
         policyParticipateBtn.addActionListener(this::policyParticipateBtnActionPerformed);
@@ -337,18 +416,17 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                 .addGroup(policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(policyCard1Layout.createSequentialGroup()
                         .addComponent(openLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addComponent(titleLbl))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(policyCard1Layout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addComponent(policyTitle)
-                        .addGap(0, 109, Short.MAX_VALUE)))
+                        .addGroup(policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(policyCard1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(policyParticipateBtn))
+                            .addComponent(policyTitle1))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(policyCard1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(policyParticipateBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         policyCard1Layout.setVerticalGroup(
             policyCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -358,12 +436,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                     .addComponent(openLbl)
                     .addComponent(titleLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(policyTitle)
+                .addComponent(policyTitle1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(policyParticipateBtn)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         consultationPanel.add(policyCard1);
@@ -372,13 +448,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         titleLbl1.setText("Close in 18 days");
 
-        policyTitle1.setText("Title");
-
-        policyDiscription1.setColumns(20);
-        policyDiscription1.setRows(5);
-        jScrollPane7.setViewportView(policyDiscription1);
+        policyTitle2.setText("Title");
 
         policyParticipateBtn1.setText("Participate Now");
+        policyParticipateBtn1.addActionListener(this::policyParticipateBtn1ActionPerformed);
 
         javax.swing.GroupLayout policyCard2Layout = new javax.swing.GroupLayout(policyCard2);
         policyCard2.setLayout(policyCard2Layout);
@@ -389,18 +462,17 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                 .addGroup(policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(policyCard2Layout.createSequentialGroup()
                         .addComponent(openLbl1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addComponent(titleLbl1))
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(policyCard2Layout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addComponent(policyTitle1)
-                        .addGap(0, 109, Short.MAX_VALUE)))
+                        .addGroup(policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(policyCard2Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(policyParticipateBtn1))
+                            .addComponent(policyTitle2))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, policyCard2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(policyParticipateBtn1)
-                .addGap(15, 15, 15))
         );
         policyCard2Layout.setVerticalGroup(
             policyCard2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -410,12 +482,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                     .addComponent(openLbl1)
                     .addComponent(titleLbl1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(policyTitle1)
+                .addComponent(policyTitle2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(policyParticipateBtn1)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         consultationPanel.add(policyCard2);
@@ -424,13 +494,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         titleLbl2.setText("Close in 18 days");
 
-        policyTitle2.setText("Title");
-
-        policyDiscription2.setColumns(20);
-        policyDiscription2.setRows(5);
-        jScrollPane8.setViewportView(policyDiscription2);
+        policyTitle3.setText("Title");
 
         policyParticipateBtn2.setText("Participate Now");
+        policyParticipateBtn2.addActionListener(this::policyParticipateBtn2ActionPerformed);
 
         javax.swing.GroupLayout policyCard3Layout = new javax.swing.GroupLayout(policyCard3);
         policyCard3.setLayout(policyCard3Layout);
@@ -441,18 +508,17 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                 .addGroup(policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(policyCard3Layout.createSequentialGroup()
                         .addComponent(openLbl2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addComponent(titleLbl2))
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(policyCard3Layout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addComponent(policyTitle2)
-                        .addGap(0, 109, Short.MAX_VALUE)))
+                        .addGroup(policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(policyCard3Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(policyParticipateBtn2))
+                            .addComponent(policyTitle3))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(policyCard3Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(policyParticipateBtn2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         policyCard3Layout.setVerticalGroup(
             policyCard3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -462,12 +528,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                     .addComponent(openLbl2)
                     .addComponent(titleLbl2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(policyTitle2)
+                .addComponent(policyTitle3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(policyParticipateBtn2)
-                .addContainerGap(691, Short.MAX_VALUE))
+                .addContainerGap(554, Short.MAX_VALUE))
         );
 
         consultationPanel.add(policyCard3);
@@ -482,8 +546,8 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelPolicyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(policyHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(policyScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
-                .addContainerGap(13, Short.MAX_VALUE))
+                    .addComponent(policyScroll))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         panelPolicyLayout.setVerticalGroup(
             panelPolicyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -969,8 +1033,22 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     }//GEN-LAST:event_infastructurePolicyActionPerformed
 
     private void policyParticipateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_policyParticipateBtnActionPerformed
-        // TODO add your handling code here:
+        if (masterPolicies.size() > 0){
+            openParticipationPopup(masterPolicies.get(0));
+        }
     }//GEN-LAST:event_policyParticipateBtnActionPerformed
+
+    private void policyParticipateBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_policyParticipateBtn1ActionPerformed
+        if (masterPolicies.size() > 1){
+            openParticipationPopup(masterPolicies.get(0));
+        }
+    }//GEN-LAST:event_policyParticipateBtn1ActionPerformed
+
+    private void policyParticipateBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_policyParticipateBtn2ActionPerformed
+        if (masterPolicies.size() > 2){
+            openParticipationPopup(masterPolicies.get(0));
+        }
+    }//GEN-LAST:event_policyParticipateBtn2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1039,13 +1117,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JMenu justice;
     private javax.swing.JComboBox<String> locationBox;
     private javax.swing.JLabel locationLbl;
@@ -1070,9 +1145,6 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JPanel policyCard1;
     private javax.swing.JPanel policyCard2;
     private javax.swing.JPanel policyCard3;
-    private javax.swing.JTextArea policyDiscription;
-    private javax.swing.JTextArea policyDiscription1;
-    private javax.swing.JTextArea policyDiscription2;
     private javax.swing.JPanel policyHeader;
     private javax.swing.JLabel policyLbl;
     private javax.swing.JButton policyParticipateBtn;
@@ -1080,9 +1152,9 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     private javax.swing.JButton policyParticipateBtn2;
     private javax.swing.ButtonGroup policyRadionBtn;
     private javax.swing.JScrollPane policyScroll;
-    private javax.swing.JLabel policyTitle;
     private javax.swing.JLabel policyTitle1;
     private javax.swing.JLabel policyTitle2;
+    private javax.swing.JLabel policyTitle3;
     private javax.swing.JLabel progressLbl;
     private javax.swing.JLabel progressLbl1;
     private javax.swing.JLabel progressLbl2;

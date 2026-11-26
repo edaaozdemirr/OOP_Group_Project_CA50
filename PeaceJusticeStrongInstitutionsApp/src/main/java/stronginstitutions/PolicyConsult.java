@@ -21,10 +21,18 @@ public class PolicyConsult {
         this.referenceLinks = referenceLinks;
     
     }
-    public String getId(){return id;}
-    public String getTitle(){return title;}
-    public String getSUmmary(){return summary;}
-    public String getReferenceLinks(){return referenceLinks;}
+    public String getId(){
+        return id;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public String getSUmmary(){
+        return summary;
+    }
+    public String getReferenceLinks(){
+        return referenceLinks;
+    }
     
     @Override
     public String toString(){
