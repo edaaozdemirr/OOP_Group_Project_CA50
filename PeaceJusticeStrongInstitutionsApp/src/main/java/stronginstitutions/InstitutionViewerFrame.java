@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Nilantha
+ * @author Menomi
  */
 public class InstitutionViewerFrame extends javax.swing.JFrame {
     
@@ -84,12 +84,12 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
         String query = searchTextField.getText().trim().toLowerCase();
         if(query.equals("search by name")){
             query = "";
-        }
+        } //doesn't automatically delete the placeholder. Add that function
         
         String selectedType = "All Types";
         if(typesBox.getSelectedItem() != null){
             selectedType = typesBox.getSelectedItem().toString().trim();
-        }
+        } //The filtering doesn't work for types need to check that
         
         String selectedRegion = "All Regions";
         if(regionsBox.getSelectedItem() != null){
@@ -101,7 +101,7 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
             selectedRating = ratingsBox.getSelectedItem().toString().trim();
         } 
         
-        //Without this matching filtered items will not be added into displayedEntities Array!!!
+        //Add the matching filtered items into displayedEntities Array!!!
         for (PublicEntity entity : masterEntities){
             boolean matchesName = query.isEmpty() || entity.getEntityName().toLowerCase().contains(query);
             
@@ -112,7 +112,8 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
             if(matchesName && matchesType && matchesRegion){
                 displayedEntities.add(entity);
             }
-        }
+        } //What is rule switch ?
+        //NetBeans stop giving me ideas!!!!
         switch (selectedRating){
             case "Highest Transparency":
                 displayedEntities.sort((a,b) -> Double.compare(b.getTransparencyRating(), a.getTransparencyRating()));
@@ -120,7 +121,7 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
             case "Highest Efficiency":
                 displayedEntities.sort((a,b)-> Double.compare(b.getResourceEfficiency(),a.getResourceEfficiency()));
                 break;
-            case "Highest Compliance":
+            case "Highest Compliance": //Doesn't work the way i want it to :(
                 displayedEntities.sort((a,b)-> b.getAuditCompliance().compareToIgnoreCase(a.getAuditCompliance()));
                 break;
             default:

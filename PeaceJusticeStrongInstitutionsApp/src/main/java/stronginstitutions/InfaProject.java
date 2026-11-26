@@ -6,7 +6,7 @@ package stronginstitutions;
 
 /**
  *
- * @author Nilantha
+ * @author Menomi
  */
 public class InfaProject {
     

@@ -6,7 +6,7 @@ package stronginstitutions;
 
 /**
  *
- * @author Nilantha
+ * @author Menomi
  */
 //inheritnce in which the EducationalAuthority inherits form publicEntity(Super class)
 public class EducationalAuthority extends PublicEntity {
