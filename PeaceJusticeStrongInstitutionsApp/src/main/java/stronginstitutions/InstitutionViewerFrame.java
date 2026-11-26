@@ -80,6 +80,7 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
     private void applyFilters(){
         displayedEntities.clear();
         
+        //read the search filter inputs
         String query = searchTextField.getText().trim().toLowerCase();
         if(query.equals("search by name")){
             query = "";
@@ -100,9 +101,34 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
             selectedRating = ratingsBox.getSelectedItem().toString().trim();
         } 
         
+        //Without this matching filtered items will not be added into displayedEntities Array!!!
         for (PublicEntity entity : masterEntities){
             boolean matchesName = query.isEmpty() || entity.getEntityName().toLowerCase().contains(query);
+            
+            boolean matchesType = selectedType.equals("All Types") || entity.getEntityName().toLowerCase().contains(selectedType.toLowerCase());
+            
+            boolean matchesRegion = selectedRegion.isEmpty() || selectedRegion.equals("All Regions") || entity.getRegion().equalsIgnoreCase(selectedRegion);
+            
+            if(matchesName && matchesType && matchesRegion){
+                displayedEntities.add(entity);
+            }
         }
+        switch (selectedRating){
+            case "Highest Transparency":
+                displayedEntities.sort((a,b) -> Double.compare(b.getTransparencyRating(), a.getTransparencyRating()));
+                break;
+            case "Highest Efficiency":
+                displayedEntities.sort((a,b)-> Double.compare(b.getResourceEfficiency(),a.getResourceEfficiency()));
+                break;
+            case "Highest Compliance":
+                displayedEntities.sort((a,b)-> b.getAuditCompliance().compareToIgnoreCase(a.getAuditCompliance()));
+                break;
+            default:
+                break;
+            
+        }
+        
+        refreshTable();
     }
     
 
@@ -217,8 +243,10 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
         ratingsBox.addActionListener(this::ratingsBoxActionPerformed);
 
         searchBtn.setText("Search\n");
+        searchBtn.addActionListener(this::searchBtnActionPerformed);
 
         resetBtn.setText("Reset");
+        resetBtn.addActionListener(this::resetBtnActionPerformed);
 
         main.setText("Main");
 
@@ -430,6 +458,19 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_metricViewerTableMouseClicked
 
+    private void searchBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtnActionPerformed
+        applyFilters();
+    }//GEN-LAST:event_searchBtnActionPerformed
+
+    private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
+        searchTextField.setText("");
+        typesBox.setSelectedIndex(0);
+        regionsBox.setSelectedIndex(0);
+        ratingsBox.setSelectedIndex(0);
+        applyFilters();
+    }//GEN-LAST:event_resetBtnActionPerformed
+    
+    
     /**
      * @param args the command line arguments
      */
