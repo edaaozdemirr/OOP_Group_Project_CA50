@@ -64,6 +64,7 @@ public class AuditFeedbackForm extends javax.swing.JFrame {
         infastructurePolicy = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1200, 800));
 
         auditLbl.setText("Audit ID :");
 

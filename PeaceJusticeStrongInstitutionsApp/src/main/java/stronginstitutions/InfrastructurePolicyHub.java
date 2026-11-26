@@ -155,9 +155,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
         setMinimumSize(new java.awt.Dimension(1200, 800));
+        setPreferredSize(new java.awt.Dimension(1200, 800));
 
         panelFilters.setBackground(new java.awt.Color(204, 204, 204));
-        panelFilters.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        panelFilters.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         filtersLbl.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         filtersLbl.setText("Filters");
@@ -288,7 +289,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         getContentPane().add(panelFilters, java.awt.BorderLayout.LINE_START);
 
         panelFooter.setBackground(new java.awt.Color(204, 255, 255));
-        panelFooter.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        panelFooter.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         javax.swing.GroupLayout panelFooterLayout = new javax.swing.GroupLayout(panelFooter);
         panelFooter.setLayout(panelFooterLayout);
@@ -598,7 +599,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         panelProjectList.setLayout(new javax.swing.BoxLayout(panelProjectList, javax.swing.BoxLayout.Y_AXIS));
 
-        project1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         project1.setMaximumSize(new java.awt.Dimension(32767, 200));
         project1.setMinimumSize(new java.awt.Dimension(300, 200));
         project1.setPreferredSize(new java.awt.Dimension(600, 200));
@@ -672,7 +673,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         panelProjectList.add(project1);
 
-        project2.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         project2.setMaximumSize(new java.awt.Dimension(32767, 200));
         project2.setMinimumSize(new java.awt.Dimension(300, 200));
         project2.setPreferredSize(new java.awt.Dimension(600, 200));
@@ -746,7 +747,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         panelProjectList.add(project2);
 
-        project3.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         project3.setMaximumSize(new java.awt.Dimension(32767, 200));
         project3.setMinimumSize(new java.awt.Dimension(300, 200));
         project3.setPreferredSize(new java.awt.Dimension(600, 200));
@@ -820,7 +821,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
         panelProjectList.add(project3);
 
-        project4.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        project4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         project4.setMaximumSize(new java.awt.Dimension(32767, 200));
         project4.setMinimumSize(new java.awt.Dimension(300, 200));
         project4.setPreferredSize(new java.awt.Dimension(600, 200));
@@ -867,9 +868,8 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                         .addComponent(budgetLbl3)
                         .addGap(59, 59, 59)
                         .addComponent(dateLbl3))
-                    .addGroup(project4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(locationLbl3)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(locationLbl3)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(589, Short.MAX_VALUE))
         );
         project4Layout.setVerticalGroup(

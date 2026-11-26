@@ -3,11 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package stronginstitutions;
+//imports for the menu (navigation)
 import globalPeace.Donations;
 import globalPeace.PeaceBuilderInfoFrame;
 import justice.ActionGUI;
 import justice.CasesGUI;
 import main.MainDashboard;
+
+//imports for the functionality
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -16,13 +22,89 @@ import main.MainDashboard;
 public class InstitutionViewerFrame extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InstitutionViewerFrame.class.getName());
-
+    //The full list of institutions
+    private final ArrayList<PublicEntity> masterEntities = new ArrayList<>();
+    //Used when the user add filters
+    private final ArrayList<PublicEntity> displayedEntities = new ArrayList<>();
     /**
      * Creates new form InstitutionViewerFrame
      */
+    
     public InstitutionViewerFrame() {
         initComponents();
+        loadInitialData();
+        refreshTable();
+        
+       
     }
+    private void loadInitialData(){
+            masterEntities.clear();
+            displayedEntities.clear();
+            
+            //all the master data displayed when filters are not added
+            masterEntities.add(new HealthcareBoard(
+                    "Health Service Executive (HSE)" , "Healthcare Board" , "Ireland",
+                    7.4, 6.8, "Partially Compliant", 54
+            ));
+            masterEntities.add(new EducationalAuthority(
+                    "Higher Education Authority (HEA)" , "Educational Authority" , "Ireland",
+                    8.5, 8.2, "Compliant", 25
+            ));
+            masterEntities.add(new PublicEntity(
+                    "Enviromantal Protection Agency (EPA)" , "Public Entity" , "Ireland",
+                    8.8, 8.4, "Compliant"
+            ));
+            displayedEntities.addAll(masterEntities); //display the data into the table
+    }
+    private void refreshTable(){
+        //retrieve the data in the table and cast it to the DefaultTableModel to be able to add or clear rows programmatically
+        DefaultTableModel model = (DefaultTableModel) metricViewerTable.getModel();
+        model.setRowCount(0); //clear all the exsixting rows (Placeholder rows deleted)
+        
+        for (PublicEntity entity : displayedEntities){ //step through all objects stored in displayedEntities
+            //Object[] allow mixed data types.
+            model.addRow(new Object[]{ //creates and new object array (one row in the table)
+                //populate the columns by calling the getter methods 
+                entity.getEntityName(),
+                entity.getEntityType(),
+                entity.getRegion(),
+                entity.getTransparencyRating(),
+                entity.getResourceEfficiency(),
+                entity.getAuditCompliance()
+            });
+        }
+        
+    }
+    
+    
+    private void applyFilters(){
+        displayedEntities.clear();
+        
+        String query = searchTextField.getText().trim().toLowerCase();
+        if(query.equals("search by name")){
+            query = "";
+        }
+        
+        String selectedType = "All Types";
+        if(typesBox.getSelectedItem() != null){
+            selectedType = typesBox.getSelectedItem().toString().trim();
+        }
+        
+        String selectedRegion = "All Regions";
+        if(regionsBox.getSelectedItem() != null){
+            selectedRegion = regionsBox.getSelectedItem().toString().trim();
+        }
+        
+        String selectedRating = "All Ratings";
+        if (ratingsBox.getSelectedItem() != null){
+            selectedRating = ratingsBox.getSelectedItem().toString().trim();
+        } 
+        
+        for (PublicEntity entity : masterEntities){
+            boolean matchesName = query.isEmpty() || entity.getEntityName().toLowerCase().contains(query);
+        }
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,12 +116,12 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        metricViewerTable = new javax.swing.JTable();
         titleLbl = new javax.swing.JLabel();
         discriptionLbl = new javax.swing.JLabel();
         viewReportBtn = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        detailsTF = new javax.swing.JTextArea();
         instituteDetailsLbl = new javax.swing.JLabel();
         activeLbl = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -67,7 +149,7 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        metricViewerTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Health Service Executive (HSE)", "HealthcareBoard", "Ireland", null, null, null},
                 {"Higher Education Authority (HEA)", "EducationalAuthority", "Ireland", null, null, null},
@@ -82,14 +164,19 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Float.class, java.lang.Float.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable2);
+        metricViewerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                metricViewerTableMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(metricViewerTable);
 
         titleLbl.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
         titleLbl.setText("Public Institution And Governance viewer");
@@ -99,13 +186,12 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
 
         viewReportBtn.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
         viewReportBtn.setText("View Full Report\n");
-        viewReportBtn.setActionCommand("View Full Report\n");
         viewReportBtn.addActionListener(this::viewReportBtnActionPerformed);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Health Service Executive\nHealthcare Board\nRegion: Ireland\n\n\nTranparency Rating: \nResource Efficiency\nAudit Compliance\nFounded\nWebsite\nSummary\n\n\n");
-        jScrollPane3.setViewportView(jTextArea1);
+        detailsTF.setColumns(20);
+        detailsTF.setRows(5);
+        detailsTF.setText("Health Service Executive\nHealthcare Board\nRegion: Ireland\n\n\nTranparency Rating: \nResource Efficiency\nAudit Compliance\nFounded\nWebsite\nSummary\n\n\n");
+        jScrollPane3.setViewportView(detailsTF);
 
         instituteDetailsLbl.setFont(new java.awt.Font("Segoe UI Historic", 0, 14)); // NOI18N
         instituteDetailsLbl.setText("Institution Details");
@@ -333,6 +419,16 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
         policyHub.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_infastructurePolicyActionPerformed
+    
+    //Display the data in the right side Text field when clicked on the row
+    private void metricViewerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_metricViewerTableMouseClicked
+        int selectedRow = metricViewerTable.getSelectedRow();
+        if (selectedRow >= 0){
+            int modelRow = metricViewerTable.convertRowIndexToModel(selectedRow);
+            PublicEntity selected = displayedEntities.get(modelRow);
+            detailsTF.setText(selected.getReport());
+        }
+    }//GEN-LAST:event_metricViewerTableMouseClicked
 
     /**
      * @param args the command line arguments
@@ -364,6 +460,7 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
     private javax.swing.JToggleButton activeLbl;
     private javax.swing.JMenuItem auditFeedback;
     private javax.swing.JMenuItem dashboard;
+    private javax.swing.JTextArea detailsTF;
     private javax.swing.JLabel discriptionLbl;
     private javax.swing.JMenuItem donations;
     private javax.swing.JLabel findPublicLbl;
@@ -376,12 +473,11 @@ public class InstitutionViewerFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JMenu justice;
     private javax.swing.JMenu main;
     private javax.swing.JMenuItem metricViewer;
+    private javax.swing.JTable metricViewerTable;
     private javax.swing.JComboBox<String> ratingsBox;
     private javax.swing.JComboBox<String> regionsBox;
     private javax.swing.JButton resetBtn;

@@ -9,5 +9,5 @@ package stronginstitutions;
  * @author Nilantha
  */
 public class StrongInstApp {
-    String getReport();
+    
 }
