@@ -27,7 +27,7 @@ public class PolicyConsult {
     public String getTitle(){
         return title;
     }
-    public String getSUmmary(){
+    public String getSummary(){
         return summary;
     }
     public String getReferenceLinks(){

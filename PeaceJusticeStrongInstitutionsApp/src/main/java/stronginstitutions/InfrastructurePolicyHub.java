@@ -14,6 +14,12 @@ import main.MainDashboard;
 //Imports for th functionality
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.ButtonGroup;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 
 /**
  *
@@ -32,6 +38,7 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     public InfrastructurePolicyHub() {
         initComponents();
         loadInitialPolicies();
+        syncPolicies();
         
     }
     
@@ -58,8 +65,6 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
                 "Link"
         ));
         
-        //refreshPolicyTable();
-        //refreshSubmissionDisplay();
     }
     
     //adds the policy data into the GUI cards
@@ -94,10 +99,10 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
     //The JOptionPane pop up form for the participate now button
     
     private void participationPopup(PolicyConsult selectedPolicy){
-        JtextArea summaryArea = new JTextArea(slectedPolicy.getSummary(), 3, 35);
+        JTextArea summaryArea = new JTextArea(selectedPolicy.getSummary(), 3, 35);
         summaryArea.setEditable(false);
         summaryArea.setLineWrap(true);
-        summaryArea.setWrapStyle(true);
+        summaryArea.setWrapStyleWord(true);
         
         JTextArea linksArea = new JTextArea(selectedPolicy.getReferenceLinks(), 2, 35);
         linksArea.setEditable(false);
@@ -106,7 +111,55 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
         
         JRadioButton supportBtn = new JRadioButton("Support", true);
         JRadioButton neutralBtn = new JRadioButton("Neutral");
-        JRadioButton opposeBtn = new JRadionButton("Oppose");
+        JRadioButton opposeBtn = new JRadioButton("Oppose");
+        
+        ButtonGroup voteGroup = new ButtonGroup();
+        voteGroup.add(supportBtn);
+        voteGroup.add(neutralBtn);
+        voteGroup.add(opposeBtn);
+        
+        JPanel votePanel = new JPanel();
+        votePanel.add(supportBtn);
+        votePanel.add(neutralBtn);
+        votePanel.add(opposeBtn);
+        
+        JTextArea commentArea = new JTextArea(3, 35);
+        commentArea.setLineWrap(true);
+        commentArea.setWrapStyleWord(true);
+        
+        Object[] fields = {
+            "Policy: " + selectedPolicy.getTitle(),
+            "Summary: ",
+            new JScrollPane(summaryArea),
+            "Additional Information: ",
+            new JScrollPane(linksArea),
+            "Your Vote: ",
+            votePanel,
+            "Comments / Opinions: ",
+            new JScrollPane(commentArea)
+        };
+        
+        int choice = JOptionPane.showConfirmDialog(
+                this, 
+                fields,
+                "Participate in Consulatation",
+                JOptionPane.OK_CANCEL_OPTION,
+                JOptionPane.PLAIN_MESSAGE
+        );
+        
+        if(choice == JOptionPane.OK_OPTION){
+            String vote = supportBtn.isSelected() ? "Support"
+                    :opposeBtn.isSelected() ? "Oppose" : "Neutral";
+            String comment = commentArea.getText().trim();
+            
+            submissions.add(new ConsultSubmission(selectedPolicy.getTitle(), vote, comment));
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Submission recorded (" + vote + "). Total Sumissions: " + submissions.size()
+            
+            );
+        }
+
     }
     
    
@@ -1034,19 +1087,19 @@ public class InfrastructurePolicyHub extends javax.swing.JFrame {
 
     private void policyParticipateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_policyParticipateBtnActionPerformed
         if (masterPolicies.size() > 0){
-            openParticipationPopup(masterPolicies.get(0));
+           participationPopup(masterPolicies.get(0));
         }
     }//GEN-LAST:event_policyParticipateBtnActionPerformed
 
     private void policyParticipateBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_policyParticipateBtn1ActionPerformed
         if (masterPolicies.size() > 1){
-            openParticipationPopup(masterPolicies.get(0));
+            participationPopup(masterPolicies.get(0));
         }
     }//GEN-LAST:event_policyParticipateBtn1ActionPerformed
 
     private void policyParticipateBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_policyParticipateBtn2ActionPerformed
         if (masterPolicies.size() > 2){
-            openParticipationPopup(masterPolicies.get(0));
+            participationPopup(masterPolicies.get(0));
         }
     }//GEN-LAST:event_policyParticipateBtn2ActionPerformed
 

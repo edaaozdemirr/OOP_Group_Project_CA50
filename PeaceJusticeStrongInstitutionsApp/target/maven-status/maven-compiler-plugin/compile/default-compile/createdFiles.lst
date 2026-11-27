@@ -5,6 +5,7 @@ justice\ActionGUI$1.class
 stronginstitutions\AuditFeedbackForm.class
 stronginstitutions\InstitutionViewerFrame.class
 stronginstitutions\PolicyConsult.class
+stronginstitutions\ConsultSubmission.class
 globalPeace\Donations.class
 stronginstitutions\summarise.class
 stronginstitutions\PublicEntity.class
